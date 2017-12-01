@@ -1,0 +1,59 @@
+@import 'utils';
+
+.page {
+  margin-top: 3rem;
+  .content {
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+    // &.padding {
+    //   padding-top: 3.5rem;
+    // }
+    // &.responsive {
+    //   padding-left: 2rem;
+    //   padding-right: 2rem;
+    //   @include responsive();
+    //   width: 50%;
+    //   background: blue;
+    // }
+
+    .title-wrapper {
+      // width: 50%;
+      // margin: auto;
+
+      .title {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        color: color(main);
+        // color: #141414;
+        font-size: 1.5rem;
+        // padding-bottom: 1rem;
+        // text-decoration: underline;
+      }
+
+      .sub-title-wrapper {
+        width: 100%;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        margin-bottom: 4rem;
+
+        &.bar {
+          // background: rgb(231, 230, 230);
+          background: color(grey);
+        }
+
+        .sub-title {
+          // width: 30%;
+          margin: auto;
+          margin-top: 0;
+          margin-bottom: 0;
+          text-align: center;
+          font-size: 1.3rem;;
+
+        }    
+        
+      }
+    }
+  }
+}

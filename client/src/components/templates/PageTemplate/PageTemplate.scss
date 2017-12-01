@@ -1,0 +1,29 @@
+@import 'utils';
+
+.page {
+  min-height: 800px;
+
+  header {
+    width: 100%;
+    // position: fixed;
+    top: 0;
+    left: 0;
+    z-index: z-index-for('header');
+
+    &.home {
+      background: color(beige);
+      // position: absolute;
+    }
+  }
+
+  // .content {
+  //   &.padding {
+  //     padding-top: 3.5rem;
+  //   }
+  //   &.responsive {
+  //     padding-left: 1rem;
+  //     padding-right: 1rem;
+  //     @include responsive();
+  //   }
+  // }
+}

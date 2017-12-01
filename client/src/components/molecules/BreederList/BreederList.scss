@@ -1,0 +1,112 @@
+@import 'utils';
+
+.breederList {
+
+  .page {
+    padding: 5rem;
+    background: white;
+
+    @include media('<tablet') {
+      flex-direction: column;
+    }
+
+    .titleImage-wrapper {
+      margin: auto;
+
+      .titleImage {
+        // width: 70%;
+        height: 25rem;
+        margin: auto;
+      }
+    }
+
+    .main {
+
+      width: 50%;
+
+      // text-align: center;
+      .title {
+        margin: auto;
+        font-size: 1.5rem;
+        color: color(main);
+        width: 70%;
+        text-align: left;
+        padding-bottom: 1rem;
+      }
+
+      .description {
+        font-size: 1.2rem;
+        margin: auto;
+        width: 70%;
+        text-align: left;
+      }
+
+      .breederImage-wrapper {
+        width: 80%;
+        margin: auto;
+        justify-content: center;
+        // flex-direction: row;
+
+        .breederImage-title {
+          font-size: 1.4rem;
+          color: color(main);
+          text-align: center;
+          margin: auto;
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+        }
+
+        .wrapper {
+          // display: flex;
+          // flex-direction: row;
+          text-align: center;
+
+          .link {
+            margin-left: 1rem;
+            margin-right: 1rem;
+            
+            .breederImage {
+              // width: 45%;
+              // margin: auto;
+              // text-align: center;
+              // justify-content: center;
+              // height: 45%;
+              width: 30%;
+            }
+          }
+          
+        }
+        
+      }
+    }
+  }
+
+  .tag-wrapper {
+    background: color(soft-main);
+    padding: 2rem;
+
+    .layout {
+      width: 100%;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .tag {
+        color: white;        
+        background: color(main);
+        border-radius: 10px;
+        margin: 0.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+      }
+    }
+
+    
+  }
+}

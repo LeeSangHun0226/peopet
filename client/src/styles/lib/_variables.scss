@@ -1,0 +1,27 @@
+$breakpoints: (
+  phone: 480px,
+  tablet: 768px, 
+  pc: 992px,
+  wide: 1200px
+);
+
+$z-indexes: (
+  'header': 5,
+  'screen-mask': 20,
+  'modal': 30,
+  'dimmer': 35
+);
+
+$colors: (
+  // main: #6caec6
+  // main: #30AFC7
+  // main: #4dd0e1
+  // main: #40c4ff
+  soft-main: #dceff5,
+  main: #3ecae5,
+  grey: #f4f4f4,
+  beige: #fffef8,
+  black: #141414,
+  font:#424242,
+  // main: rgb(108, 174, 198)
+)

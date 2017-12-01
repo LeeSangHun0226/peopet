@@ -1,0 +1,33 @@
+@import 'utils';
+
+.admin {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .label-container {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    @include media("<tablet") {
+      flex-direction: column;
+    }
+
+    .label {
+      width: 20%;
+
+      @include media("<tablet") {
+        width: 100%;
+      }
+    }
+  }
+
+  .button-wrapper {
+    padding-bottom: 1rem;
+    margin: auto;
+  }
+  // background: material-color('teal', '600');
+
+}

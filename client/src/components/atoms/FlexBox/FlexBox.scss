@@ -1,0 +1,22 @@
+@import 'utils';
+
+.flex-box {
+  display: flex;
+  &.row {
+    flex-direction: row;
+  }
+  &.column {
+    flex-direction: column;
+  }
+  &.center {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  &.right {
+    justify-content: flex-end;
+  }
+  &.space {
+    justify-content: space-around;
+  }
+}

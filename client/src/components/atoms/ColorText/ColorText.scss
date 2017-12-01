@@ -1,0 +1,23 @@
+@import 'utils';
+
+.colorText {
+  padding: 0.5rem;
+  width: 60%;
+  margin: auto;
+  text-align: center;
+
+  &.around {
+    border-radius: 2rem;
+  }
+
+  &.main {
+    background: color('main');
+  }
+
+  .text {
+    
+    &.white {
+      color: white;
+    }
+  }
+}

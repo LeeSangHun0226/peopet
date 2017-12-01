@@ -1,0 +1,36 @@
+@import 'utils';
+
+.headerBurger {
+  position: relative;
+  width: 100%;
+
+
+  .head-nav {
+  height: 10rem;
+  display: flex;
+
+  @include media("<tablet") {
+    display: none;
+  }
+
+  .bar {
+    border: 1px solid grey;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+  .responsive-button {
+    display: none;
+    background: transparent;
+    border: 0;
+
+    @include media("<tablet") {
+      display: flex; 
+    }
+
+    .burger {
+      height: 2.5rem;    
+    }
+  }
+}

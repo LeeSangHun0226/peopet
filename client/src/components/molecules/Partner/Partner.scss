@@ -1,0 +1,26 @@
+@import 'utils';
+
+* {
+  min-height: 0;
+  min-width: 0;
+}
+
+.partner {
+
+  .slick-arrow{
+    display: none;
+  }
+
+  .slick-next{
+    display: none;
+  }
+
+  .image {
+    width: 15rem;
+    margin: auto;
+
+    @include media("<tablet") {
+      width: 10rem;
+    }
+  }
+}

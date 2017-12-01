@@ -1,0 +1,41 @@
+@import 'utils';
+
+.header-nav {
+  height: 2rem;
+  display: flex;
+
+  @include media("<tablet") {
+    display: none;
+  }
+
+  .bar {
+    border: 1px solid color(grey);
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+.responsive-button {
+  display: none;
+  background: grey;
+  border: 0;
+
+  @include media("<tablet") {
+    display: flex; 
+  }
+
+  .burger {
+    height: 2.5rem;    
+  }
+}
+
+.header-nav-responsive {
+  height: 1rem;
+  .wrapper {
+    background: blue;
+  }
+}
+
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.9);
+}

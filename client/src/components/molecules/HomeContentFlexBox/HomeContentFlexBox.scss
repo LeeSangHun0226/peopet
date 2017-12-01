@@ -1,0 +1,46 @@
+@import 'utils';
+
+.content {
+  flex-wrap: wrap;
+  justify-content: center;
+  .image {
+    margin: 1rem;
+    padding-bottom: 1rem;
+    .img {
+        margin-bottom: 1rem;
+
+        &.breeder {
+          width: 15rem;
+
+        //   @include media("<pc") {
+        //     width: 20rem;
+        //   }
+
+        //   @include media("<tablet") {
+        //     width: 18rem;
+        //   }
+
+        //   @include media("<phone") {
+        //     width: 15rem;
+        //   }
+        }
+
+        &.why {
+          width: 12rem;
+        }
+
+        &.review {
+          width: 14rem;
+        }
+    }
+
+    .description {
+      color: color(black);
+      text-align: center;
+      width: 60%;
+      margin: auto;
+    }
+
+  }
+  
+}
