@@ -24,13 +24,7 @@ class HeaderNav extends Component {
 
   renderNav = (location) => (
     <div className={cx('header-nav')}>
-      <NavItem location={location} to="/about">ABOUT US</NavItem>
-      <div className={cx('bar')} />
       <NavItem location={location} to="/breeders">BREEDERS</NavItem>
-      <div className={cx('bar')} />
-      <NavItem location={location} to="/blog">BLOG</NavItem>
-      <div className={cx('bar')} />
-      <NavItem location={location} to="/partnership">PARTNER SHIP</NavItem>
       <div className={cx('bar')} />
       <NavItem location={location} to="/support">입양 문의</NavItem>
     </div>
@@ -57,6 +51,7 @@ class HeaderNav extends Component {
     let responsive;
     return (
       <FlexBox >
+      {/*}
         {
           this.state.responsive
           ? this.renderResponsiveNav(location, responsive)
@@ -65,6 +60,8 @@ class HeaderNav extends Component {
         <button className={cx('responsive-button')} onClick={() => this.handleClick()}>
           <img className={cx('burger')} src={burgerImg} alt="burgerImg" />
         </button>
+      */}
+        {this.renderNav(location)}
       </FlexBox>
     );
   }

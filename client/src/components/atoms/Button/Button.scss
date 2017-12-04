@@ -13,9 +13,9 @@
   user-select: none;
 
   // default
-  background: material-color('blue', 'a700');
+  background: material-color('grey', '200');
   &:hover {
-    background: material-color('grey', '200');
+    background: material-color('grey', '400');
   }
   &:active {
     background: material-color('grey', '300');
@@ -33,6 +33,14 @@
     }
     &:active {
       @include material-shadow(2, 2);
+    }
+  }
+
+  &.breeder {
+    background: transparent;
+
+    &:hover {
+      background: material-color('grey', '300');
     }
   }
 

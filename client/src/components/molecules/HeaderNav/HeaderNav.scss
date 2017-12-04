@@ -1,12 +1,12 @@
 @import 'utils';
 
 .header-nav {
-  height: 2rem;
+  // height: 2rem;
   display: flex;
 
-  @include media("<tablet") {
-    display: none;
-  }
+  // @include media("<tablet") {
+  //   display: none;
+  // }
 
   .bar {
     border: 1px solid color(grey);
@@ -21,7 +21,7 @@
   border: 0;
 
   @include media("<tablet") {
-    display: flex; 
+    // display: flex; 
   }
 
   .burger {

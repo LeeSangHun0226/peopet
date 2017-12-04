@@ -6,6 +6,7 @@ import HomePage from './components/pages/HomePage';
 import BreederPage from './components/pages/BreederPage';
 import BreederDetailPage from './components/pages/BreederDetailPage';
 import AdminPage from './components/pages/AdminPage';
+import SupportPage from './components/pages/SupportPage'
 // import Header from './components/organisms/Header';
 import Footer from './components/organisms/Footer';
 import store from './store';
@@ -32,12 +33,13 @@ class App extends Component {
     return this.state.loading === true ? <h1>Loading</h1> : (
       <Provider store={store}>
         <Router>
-          <div style={{ height: '100%' }}>
+          <div style={{ height: '100%', width: '100%' }}>
             <Switch>
               <Route exact path="/" authed={this.state.authed} component={HomePage} />
               <Route exact path="/breeders" component={BreederPage} />
               <Route path="/breeders/:id" component={BreederDetailPage} />
               <Route path="/admin" component={AdminPage} />
+              <Route path="/support" component={SupportPage} />
               <Route render={() => <h3>404 Not Found</h3> } />
             </Switch>
             <Footer />

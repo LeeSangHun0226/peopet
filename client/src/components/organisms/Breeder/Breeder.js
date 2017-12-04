@@ -186,12 +186,14 @@ class Breeder extends Component {
     }
     return !this.state.loading ? <h1>Loading</h1> : (
       <div className={cx('breeder')}> 
+        {/*}
         <BreederIntro breederIntroData={breederIntroData} />
         <HomeTemplate
           bar
           title="견종 대백과 사전"
           subTitle="다양한 견종의 특성을 파악하고 관련 전문 브리더를 찾아보세요"
         />
+    */}
         <nav className={cx('navbar', { isSticked })}>
           <ul className={cx('nav')}>
             <Slider {...settings}>

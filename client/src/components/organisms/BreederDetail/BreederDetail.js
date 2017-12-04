@@ -197,35 +197,35 @@ class BreederDetail extends Component {
                 <p className={cx('title')}>
                   브리딩을 시작한 계기
                 </p>
-                { data.question_start.split('<br/>').map(text => <p className={cx('description')}>{text}</p>) }
+                { data.question_start.split('<br/>').map((text, i) => <p key={i} className={cx('description')}>{text}</p>) }
               </FlexBox>
               <FlexBox className={cx('box')}>
                 <p className={cx('title')}>
                   브리딩을 하는 마인드
                 </p>
-                {data.question_mind.split('<br/>').map(text => <p className={cx('description')}>{text}</p>)}
+                {data.question_mind.split('<br/>').map((text, i) => <p key={i} className={cx('description')}>{text}</p>)}
               </FlexBox>
               <FlexBox className={cx('box')}>
                 <p className={cx('title')}>
                   강아지 관리
                 </p>
-                {data.dogWord.split('<br/>').map(text => <p className={cx('description')}>{text}</p>)}
+                {data.dogWord.split('<br/>').map((text, i) => <p key={i} className={cx('description')}>{text}</p>)}
               </FlexBox>
               <FlexBox className={cx('box')}>
                 <p className={cx('title')}>
                   예비견주에게 한마디
                 </p>
-                {data.question_word.split('<br/>').map(text => <p className={cx('description')}>{text}</p>)}
+                {data.question_word.split('<br/>').map((text, i) => <p key={i} className={cx('description')}>{text}</p>)}
               </FlexBox>
             </FlexBox>
           </div>
           <div name={'kannel'} className={cx('element')}>
             <div className={cx('kannel-image')}>
-              <img src={this.state.currentKannelImage} alt="kannelImage"/>
+              <img className={cx('image')} src={this.state.currentKannelImage} alt="kannelImage"/>
               <FlexBox className={cx('image-dot')}>
               {
                 data.kannelImage.map((image, i) => (
-                  <Button className={cx('dot')} key={i} onClick={() => this.changeCurrentKannelImage(image)}>
+                  <Button breeder className={cx('dot')} key={i} onClick={() => this.changeCurrentKannelImage(image)}>
                     <img className={cx('image')} src={image} alt={`kannelImage ${i}`} />
                   </Button>
                 ))
@@ -240,14 +240,15 @@ class BreederDetail extends Component {
               subTitle={data.dogWord}
             />
             <div className={cx('dog-description-wrapper')}>
-              {data.dogDescription.split('<br/>').map(text => <p className={cx('dog-description')}>{text}</p>)}
+              <h3 className={cx('title')}>이런 보호자분에게 어울린다!</h3>
+              {data.dogDescription.split('<br/>').map((text, i) => <p key={i} className={cx('dog-description')}>{text}</p>)}
             </div>
             <div className={cx('kannel-image')}>
-              <img src={this.state.currentDogImage} alt="dogImage" />
+              <img className={cx('image')} src={this.state.currentDogImage} alt="dogImage" />
               <FlexBox className={cx('image-dot')}>
                 {
                   data.dogImage.map((image, i) => (
-                    <Button className={cx('dot')} key={i} onClick={() => this.changeCurrentDogImage(image)}>
+                    <Button breeder className={cx('dot')} key={i} onClick={() => this.changeCurrentDogImage(image)}>
                       <img className={cx('image')} src={image} alt={`kannelImage ${i}`} />
                     </Button>
                   ))

@@ -9,15 +9,21 @@
     // padding-top: 5rem;
     // padding-bottom: 5rem;
     // margin-top: 10rem;
-    padding-left:10px;
+    // padding-left:10px;
     overflow-y: auto;
     box-sizing: border-box;
     overflow-x: hidden;
     padding-top: 2rem;
 
     .dog-description-wrapper {
-      width: 50%;
+      width: 70%;
       margin: auto;
+
+      .title {
+        font-size: 2rem;
+        color: color(font);
+        text-align: center;
+      }
 
       .dog-description {
         text-align: center;
@@ -29,6 +35,14 @@
       margin: auto;
       text-align: center;
 
+      .image {
+        // width: 100%;
+
+        @include media("<tablet") {
+          width: 90%;
+        }
+      }
+
       .image-dot {
         flex-wrap: wrap;
         flex-direction: row;
@@ -38,6 +52,10 @@
         .dot {
           width: 5%;
           text-align: center;
+
+          @include media("<tablet") {
+            width: 10%;
+          }
 
           .image {
             width: 100%;
@@ -63,6 +81,10 @@
       margin: auto;
       flex-wrap: wrap;
       flex-direction: row;
+
+      @include media("<tablet") {
+        flex-direction: column;
+      }
 
       .box {
         flex-basis: calc(50% - 2rem );

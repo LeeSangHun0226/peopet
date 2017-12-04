@@ -1,0 +1,10 @@
+@import 'utils';
+
+.home {
+  background: transparent;
+
+  .ReactModal__Body--open {
+    overflow: hidden;
+    position: fixed;
+  }
+}

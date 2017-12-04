@@ -5,6 +5,10 @@
   .content {
     padding-top: 1.5rem;
     padding-bottom: 2.5rem;
+
+    @include media("<tablet") {
+      padding-bottom: 1rem;
+    }
     // &.padding {
     //   padding-top: 3.5rem;
     // }
@@ -25,7 +29,7 @@
         margin-left: auto;
         margin-right: auto;
         text-align: center;
-        color: color(main);
+        color: color(font);
         // color: #141414;
         font-size: 1.5rem;
         // padding-bottom: 1rem;
@@ -41,6 +45,10 @@
         &.bar {
           // background: rgb(231, 230, 230);
           background: color(grey);
+
+          @include media("<tablet") {
+            margin-bottom: 2rem;
+          }
         }
 
         .sub-title {

@@ -14,10 +14,10 @@ import breeder2Img from '../../../images/breeder2.jpg';
 import breeder3Img from '../../../images/breeder3.jpg';
 import breeder4Img from '../../../images/breeder4.jpg';
 
-import review1Img from '../../../images/review1.jpg';
-import review2Img from '../../../images/review2.jpg';
-import review3Img from '../../../images/review3.jpg';
-import review4Img from '../../../images/review4.jpg';
+import review1Img from '../../../images/home-review1.jpg';
+import review2Img from '../../../images/home-review2.png';
+import review3Img from '../../../images/home-review3.jpg';
+import review4Img from '../../../images/home-review4.jpg';
 
 import why1Img from '../../../images/why_icon1.png';
 import why2Img from '../../../images/why_icon2.png';
@@ -45,10 +45,10 @@ const breederImages = [
 ];
 
 const reviewImages = [
-  { img: review1Img, owner: '김비숑', breed: '비숑', breeder: '정주희', description: '페오펫을 통해서 분양받으니 정말 안심이 되었어요.\n특히 사회화가 잘 되어있어서 그런지 굉장히 다른 강아지들과 친하게 지낼 줄 알더군요.\n*\n더 좋았던 건 자세한 브리더님의 안내를 통해서 앞으로 어떻게 길러야할 지 방향을 알 수 있다는 점이에요.\n한마리 한마리 정성스럽게 관리하시는 브리더님도 정말 믿음직스럽습니다.' },
-  { img: review2Img, owner: '김비숑', breed: '비숑', breeder: '정주희', description: '페오펫을 통해서 분양받으니 정말 안심이 되었어요.\n특히 사회화가 잘 되어있어서 그런지 굉장히 다른 강아지들과 친하게 지낼 줄 알더군요.\n*\n더 좋았던 건 자세한 브리더님의 안내를 통해서 앞으로 어떻게 길러야할 지 방향을 알 수 있다는 점이에요.\n한마리 한마리 정성스럽게 관리하시는 브리더님도 정말 믿음직스럽습니다.' },
-  { img: review3Img, owner: '김비숑', breed: '비숑', breeder: '정주희', description: '페오펫을 통해서 분양받으니 정말 안심이 되었어요.\n특히 사회화가 잘 되어있어서 그런지 굉장히 다른 강아지들과 친하게 지낼 줄 알더군요.\n*\n더 좋았던 건 자세한 브리더님의 안내를 통해서 앞으로 어떻게 길러야할 지 방향을 알 수 있다는 점이에요.\n한마리 한마리 정성스럽게 관리하시는 브리더님도 정말 믿음직스럽습니다.' },
-  { img: review4Img, owner: '김비숑', breed: '비숑', breeder: '정주희', description: '페오펫을 통해서 분양받으니 정말 안심이 되었어요.\n특히 사회화가 잘 되어있어서 그런지 굉장히 다른 강아지들과 친하게 지낼 줄 알더군요.\n*\n더 좋았던 건 자세한 브리더님의 안내를 통해서 앞으로 어떻게 길러야할 지 방향을 알 수 있다는 점이에요.\n한마리 한마리 정성스럽게 관리하시는 브리더님도 정말 믿음직스럽습니다.' },
+  { img: review1Img, breed: '복실이', description: '애견샵에서 잘못 입양 받아 마음 고생 많이 했는데 페오펫을 통해 정말 건강한 말티즈를 입양 받아서 좋아요.<br/>상담 단계에서부터 정말 친절하고 감동이었어요.' },
+  { img: review2Img, breed: '댕이', description: '여러 시바 켄넬들을 알아보다가 예쁜 아이를 찾게되어 견사에 방문했어요.<br/>마지막 헤어질 때 엄마 냄새를 기억하라고 손수건에 모견의 체취를 담아주시는 브리더님의 강아지를 생각하는 마음이 참 고마웠어요.' },
+  { img: review3Img, breed: '아리', description: '10년 전 펫샵에서 분양받았는데, 공장견의 특성상 파보장염으로 인해 아이가 죽었어요.<br/>페오펫에서는 부모견과 브리더에 관해 전부 확인 가능한 시스템 체계가 굉장히 매력적이었어요.' },
+  { img: review4Img, breed: '망고', description: '입양 전 샵에 방문하거나 블로그 검색을 해봐도 건강한 아이인지 확신하기 어려웠어요.<br/>페오펫의 빠른 상담과 직접 브리더를 방문하고 아이가 자라온 환경을 확인하고 나니 신뢰가 생겼어요.' },
 ];
 
 const whyImages = [
@@ -148,7 +148,7 @@ class Home extends Component {
         </HomeTemplate>
         <HomeTemplate
           bar
-          title="페오펫X브리더"
+          title="페오펫 x 브리더"
           subTitle="건강한 아이들의 입양 후기를 찾아보세요!"
         >
           <HomeContentFlexBox

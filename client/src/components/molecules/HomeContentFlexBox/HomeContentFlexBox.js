@@ -8,18 +8,36 @@ const cx = classNames.bind(styles);
 
 const HomeContentFlexBox = ({ images, onClick, content }) => {
   return (
-    <FlexBox className={cx('content')}>
+    <FlexBox className={cx('content', content)}>
       {
         images.map((image, i) => {
-          if ( content === 'review') {
+          // if ( content === 'review') {
+          //   return (
+          //     <div className={cx('image')} onClick={() => onClick(image)} key={`${content}+${i}`}>
+          //       <img
+          //         className={cx('img', content)}
+          //         src={image.img}
+          //         alt={i}
+          //       />
+          //     </div>    
+          //   )
+          // }
+
+          if (content === 'review') {
             return (
-              <Button className={cx('image')} onClick={() => onClick(image)} key={`${content}+${i}`}>
+              <div className={cx('review')} key={`${content}+${i}`}>
                 <img
-                  className={cx('img', content)}
+                  className={cx('image')}
                   src={image.img}
                   alt={i}
                 />
-              </Button>    
+                <p><strong>{image.breed}</strong> 보호자님</p>
+                {
+                  image.description.split('<br/>').map((text, i) => (
+                    <p key={i} className={cx('description')}>&#8216;&#8216;{text}&#8217;&#8217;</p>
+                  ))
+                }
+              </div>
             )
           }
 

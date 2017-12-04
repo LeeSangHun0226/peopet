@@ -17,8 +17,10 @@ const Button = ({
   style,
   disabled,
   width,
+  breeder,
   ...rest
 }) => {
+
   const dynamicStyle = {
     ...(xPadding ? {
       paddingLeft: xPadding,
@@ -34,6 +36,7 @@ const Button = ({
           flat,
           disabled,
           roundCorner,
+          breeder,
         }, color, className)
       }
       style={{

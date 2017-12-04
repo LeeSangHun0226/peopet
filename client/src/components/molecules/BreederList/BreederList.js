@@ -29,8 +29,8 @@ const BreederList = ({
               {title}
             </p>
             {
-              renderDescription.map(description => (
-                <p className={cx('description')}>
+              renderDescription.map((description, i) => (
+                <p key={i} className={cx('description')}>
                   {description}
                 </p>
               ))
@@ -43,7 +43,7 @@ const BreederList = ({
               <div className={cx('wrapper')}>
                {
                   breederList.map((breeder, i) => 
-                    <Link to={`/breeders/${breeder.breederId}`} className={cx('link')}>
+                    <Link key={i} to={`/breeders/${breeder.breederId}`} className={cx('link')}>
                       <img
                         className={cx('breederImage')} 
                         key={i} 

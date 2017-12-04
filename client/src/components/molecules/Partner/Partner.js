@@ -15,11 +15,12 @@ class Partner extends Component {
     const { images } = this.props;
     const settings = {
       dots: false,
+      arrows: false,
       autoplay: true,
-      speed: 4000,
-      autoplaySpeed: 4,
-      pauseOnFocus: true,
-      pauseOnHover: true,
+      speed: 500,
+      // autoplaySpeed: 2,
+      // pauseOnFocus: true,
+      // pauseOnHover: true,
       pauseOnDotsHover: false,
       cssEase: 'linear',
       infinite: true,
@@ -64,7 +65,9 @@ class Partner extends Component {
           {
             images.map((data, i) => (
               <div key={i}>
-                <img className={cx('image')} src={data.img} alt={`partner${i}`} />
+                <a href="http://blog.naver.com/peopet/221092557955">
+                  <img className={cx('image')} src={data.img} alt={`partner${i}`} />
+                </a>
                 {data.description}
               </div>
             ))

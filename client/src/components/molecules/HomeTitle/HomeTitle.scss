@@ -19,21 +19,25 @@
 
   @include media("<tablet") {
     // background-image: url('../../../images/home-header-mobile.jpg');
-    // background-image: url('../../../images/home-header-main-1.jpeg');
-    background-image: url('../../../images/home-header-main-4.jpeg');
+    background-image: url('../../../images/home-header-main-5.jpeg');
+    // background-image: url('../../../images/home-header-main-8.jpeg');
+    // background: transparent;
   }
 
   .content-wrapper {
     position: absolute;
-    width: 100%;
+    // width: 100%;
     // right: 20%;
-    left: 25%;
+    left: 60%;
     top: 30%;
     text-align: left;
     overflow: hidden;
 
     @include media("<tablet") {
-      top: 10%;
+      top: 20%;
+      left: 10%;
+      // width: 50%;
+      // width: auto;
       // left: 20%;
     }
 
@@ -50,16 +54,17 @@
     .img-wrapper {
       display: flex;
       flex-direction: column;
-      width: 40%;
+      width: 100%;
       margin: auto;
       // justify-content: center;
+
       @include media("<wide") {
-        width: 40%;
+        // width: 20%;
       }
 
       @include media("<tablet") {
         text-align: left;
-        width: 80%;
+        // width: 80%;
         margin-left: 1rem;
         margin-top: 1rem;
         flex-direction: column;
@@ -81,10 +86,14 @@
         font-size: 2.5rem;
         font-weight: bold;
         margin: 0;
+        margin-bottom: 1.5rem;
+
+        @include media("<tablet") {
+          font-size: 2rem;
+        }
       }
 
       .title {
-        margin-top: 1.5rem;
         font-size: 2.5rem;
         font-weight: 300;
         // font-family: 'nevis' !important;
@@ -99,9 +108,10 @@
         color: material-color('grey', '700');
 
         @include media("<tablet") {
-          font-size: 3rem;
+          // font-size: 1.5rem;
+          // font-size: 3rem;
           // letter-spacing: -0.4rem;
-          text-align: center;
+          // text-align: center;
           display: none;
         }
       }
@@ -117,6 +127,30 @@
         border: 2px solid white;
         background: #ff9ca6;
         color: white;
+
+        @include media("<tablet") {
+          display: none;
+        }
+      }
+
+      .go-mobile {
+        margin-left: -0.5rem;
+        display: none;
+        padding: 0.5rem;
+        text-align: center;
+        width: 40%;
+        border-radius: 2rem;
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+        border: 2px solid white;
+        // background: #ff9ca6;
+        background: material-color('grey', '700');
+        color: white;
+
+        @include media("<tablet") {
+          display: inline;
+          width: 75%;
+        }
       }
 
       .title-mobile {
@@ -124,13 +158,13 @@
         font-family: 'Godo', sans-serif;
 
         @include media("<tablet") {
-          font-size: 2.7rem;
+          font-size: 2rem;
           line-height: 3rem;
           letter-spacing: -0.05rem;
           font-weight: 100;
           text-align: left;
           display: flex;
-          color: white;
+          color: material-color('grey', '700');
           margin: 0;
           // display: none;
         }
@@ -140,12 +174,12 @@
         display: none;
         
         @include media("<tablet") {
-          font-size: 2.7rem;
+          font-size: 2rem;
           letter-spacing: -0.05rem;
           font-weight: bold;
           text-align: left;
           display: flex;
-          color: white;
+          color: material-color('grey', '700');
           margin: 0;
           // display: none;
         }
