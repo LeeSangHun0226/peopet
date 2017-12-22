@@ -40,7 +40,7 @@
      "url": "http://peopet.co.kr",
      "sameAs": [
        "https://www.facebook.com/peopleNpet/",
-       "http://http://blog.naver.com/peopet",
+       "http://blog.naver.com/peopet",
        "https://www.instagram.com/peo_pet/",
      ]
     }
@@ -55,6 +55,26 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>페오펫 | 강아지 브리더 | peopet | 강아지 분양</title>
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return; n = f.fbq = function () {
+          n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        }; if (!f._fbq) f._fbq = n;
+        n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+        t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+      }(window,
+        document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '516045235434765'); // Insert your pixel ID here.
+      fbq('track', 'PageView');
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=516045235434765&ev=PageView&noscript=1"
+      />
+    </noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
   </head>
   <body>
     <noscript>

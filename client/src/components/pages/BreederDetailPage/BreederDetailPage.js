@@ -6,8 +6,8 @@ import BreederDetail from '../../organisms/BreederDetail';
 const BreederDetailPage = ({ authed, match, history }) => {
   return (
     <PageTemplate
-      header={<HeaderContainer authed={authed} location="home" />}
-      location="home"
+      header={<HeaderContainer authed={authed} location="breederDetail" />}
+      location="breederDetail"
     >
       <BreederDetail match={match} />
     </PageTemplate>

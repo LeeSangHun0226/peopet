@@ -6,8 +6,8 @@ import Support from '../../organisms/Support';
 const SupportPage = ({ authed }) => {
   return (
     <PageTemplate
-      header={<HeaderContainer authed={authed} location="home" />}
-      location="home"
+      header={<HeaderContainer authed={authed} location="support" />}
+      location="support"
     >
       <Support />
     </PageTemplate>

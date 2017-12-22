@@ -53,6 +53,11 @@
           width: 5%;
           text-align: center;
 
+          &:hover {
+            background: yellow;
+            // padding: 1rem;
+          }
+
           @include media("<tablet") {
             width: 10%;
           }
@@ -70,9 +75,15 @@
       text-align: center;
 
       .breederImage {
-        width: 10rem;
-        height: 10rem;
-        border-radius: 5rem;
+        width: 20rem;
+        height: 20rem;
+        border-radius: 10rem;
+
+        @include media("<tablet") {
+          width: 15rem;
+          height: 15rem;
+          border-radius: 7.5rem;
+        }
       }
     }
 

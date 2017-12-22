@@ -22,7 +22,7 @@ const Banner = ({ image }) => {
           좌충우돌 성장기를 확인해 보세요
         </p>
         <div className={cx('bar')} />
-        <Button onClick={() => window.location.assign('http://blog.naver.com/peopet/221118309091')}>바로가기 ></Button>
+        <Button className={cx('button')} onClick={() => window.location.assign('http://blog.naver.com/peopet/221118309091')}>바로가기</Button>
       </div>
     </div>
   );

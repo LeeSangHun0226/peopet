@@ -1,8 +1,10 @@
 @import 'utils';
 
 .header {
+  // position: absolute;
   height: 4rem;
-  background:white;
+  // background:white;
+  background: transparent;
   padding: 2rem;
   // &.solid {
   //   background: linear-gradient(to right bottom, #276caf, #30a1c1);

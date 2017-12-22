@@ -1,5 +1,24 @@
 @import 'utils';
 
+.spinner-wrapper {
+  height: 600px;
+  width: 100%;
+  display: flex;
+  background: transparent;
+  // margin: auto;
+  justify-content: center;
+  text-align: center;
+  
+
+  .spinner {
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    // height: 100%;
+  }
+}
+
+
 .next-arrow {
   font-size: 1rem;
   line-height: 0;
@@ -15,13 +34,12 @@
   outline: 0;
 
   &:hover {
-    background: color(main)
+    color: color(main)
   }
 
   .arrow-img {
     width: 100%;
     // height: 20px;
-
   }
 }
 
@@ -38,6 +56,10 @@
   cursor: pointer;
   background: transparent;
   outline: 0;
+
+  &:hover {
+    color: color(main)
+  }
 
   .arrow-img {
     width: 100%;
@@ -119,9 +141,11 @@
         .link {
           width: 100%;
           font-size: 1rem;
+          color: color(font);
 
           &:hover {
             font-size: 1.2rem;
+            color: color(main)
           }
 
           &.active {

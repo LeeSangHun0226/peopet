@@ -3,17 +3,16 @@
 .page {
   min-height: 800px;
 
-  header {
+  .header {
     width: 100%;
-    // position: fixed;
     top: 0;
     left: 0;
     z-index: z-index-for('header');
-
+    
     &.home {
-      background: color(beige);
-      // position: absolute;
+      position: fixed;
     }
+
   }
 
   // .content {

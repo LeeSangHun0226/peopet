@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { DotLoader } from 'react-spinners';
 
+import Spinner from './components/atoms/Spinner';
 import HomePage from './components/pages/HomePage';
 import BreederPage from './components/pages/BreederPage';
 import BreederDetailPage from './components/pages/BreederDetailPage';
@@ -30,7 +32,9 @@ class App extends Component {
   }
 
   render() {
-    return this.state.loading === true ? <h1>Loading</h1> : (
+    return this.state.loading === true ? 
+      <Spinner loading={this.state.loading} />
+    : (
       <Provider store={store}>
         <Router>
           <div style={{ height: '100%', width: '100%' }}>

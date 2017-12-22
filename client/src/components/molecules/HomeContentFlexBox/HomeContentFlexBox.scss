@@ -1,93 +1,105 @@
 @import 'utils';
 
 .content {
-  flex-wrap: wrap;
+  display: flex;
+  flex-flow: row wrap;
   justify-content: center;
+  width: 70%;
+  margin: auto;
 
   &.review {
+    width: 100%;
+    // margin-bottom: 5rem;
+    // @include media('<wide') {
+    //   margin: auto
+    // }
+
     @include media('<tablet') {
-      flex-direction: column
-    } 
-  }
-
-  .review {
-    flex: 1 1 calc(25% - 2rem);
-    text-align: center;
-    // background: grey;
-    
-    @include media("<pc") {
-      flex: 1 1 calc(50% - 1rem);
-      margin-bottom: 1.5rem;
-    }
-
-    @include media("<tablet") {
-      // margin-bottom: 1.5rem;
-    }
-
-    .image {
-    width: 18rem;
-    height: 18rem;
-    border-radius: 10rem;
-
-      @include media("<tablet") {
-        width: 15rem;
-        height: 15rem;
-        border-radius: 7.5rem;    
-      }
-    }
-
-    .description {
-      width: 80%;
-      font-size: 1.2rem;
-      margin: auto;
-      text-align: center;
-
-      @include media("<tablet") {
-        // text-align: cent
-        // font-size: 1.3rem;
-
-      }
+      width: 100%;
+      margin: 0;
     }
   }
 
   .image {
+    flex: 0 1 calc(100%/3 - 1px);
+    text-align: center;
     margin: 1rem;
-    padding-bottom: 1rem;
-    .img {
-        margin-bottom: 1rem;
 
-        &.breeder {
-          width: 15rem;
-
-        //   @include media("<pc") {
-        //     width: 20rem;
-        //   }
-
-        //   @include media("<tablet") {
-        //     width: 18rem;
-        //   }
-
-        //   @include media("<phone") {
-        //     width: 15rem;
-        //   }
-        }
-
-        &.why {
-          width: 12rem;
-        }
-
-        &.review {
-          width: 14rem;
-        }
+    @include media('<tablet') {
+      flex: 0 1 calc(50% - 3rem);      
     }
+
+    &.review {
+      // flex: 1;
+      flex: 0 1 calc(25% - 3rem);
+      // text-align: center;
+      margin-top: 0;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 5rem;
+      // text-align: left;
+
+      @include media('<tablet') {
+        // margin: 0;
+        flex: 0 1 calc(100%);
+        text-align: center;
+        
+      }
+  }
+
+    .img {
+      width: 7rem;
+
+      &.review {
+        // width: 80%;
+        width: 50%;
+        border-radius: 50%;
+        
+
+        @include media('<tablet') {
+          width: 50%;
+          text-align: center;
+        }
+      }
+    }
+
+    .review-wrapper {
+      width: 100%;
+      margin: auto;
+      // background: color(main);
+
+      @include media('<tablet') {
+        width: 80%;
+      }
+
+      .title {
+        color: color(main);
+        font-size: 1.7rem;
+        font-weight: 600;
+      }
+    }
+
 
     .description {
-      color: color(black);
-      text-align: center;
-      width: 60%;
-      margin: auto;
-    }
+      font-size: 1.4rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      color: color(main);
+      font-weight: 500;
 
+      &.review {
+        padding-top: 0;
+        padding-bottom: 1rem;
+        width: 100%;
+        margin: auto;
+        color: color(font);
+        line-height: 180%;
+        
+        // font-size: 0.8rem;
+        // font-size: 1.2rem;
+        // color: color(font);
+      }
+    }
   }
-  
+
 }

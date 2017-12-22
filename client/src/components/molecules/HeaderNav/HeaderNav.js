@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import FlexBox from '../../atoms/FlexBox';
 import NavItem from '../../atoms/NavItem';
 // import HeaderBurger from '../../molecules/HeaderBurger';
-import burgerImg from '../../../images/burger_menu.png';
+// import burgerImg from '../../../images/burger_menu.png';
 // import Button from '../../atoms/Button';
 // import { slide as Menu } from 'react-burger-menu';
 
@@ -48,7 +48,6 @@ class HeaderNav extends Component {
 
   render() {
     const { location } = this.props;
-    let responsive;
     return (
       <FlexBox >
       {/*}

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import styles from './Support.scss';
-import classNames from 'classnames/bind';
+// import styles from './Support.scss';
+// import classNames from 'classnames/bind';
 
-const cx = classNames.bind(styles);
+// const cx = classNames.bind(styles);
 
 class Support extends Component {
 
@@ -17,7 +17,7 @@ class Support extends Component {
 
   updateDimensions = () => {
     const width = window.innerWidth;
-    console.log(width)
+    // console.log(width)
     this.setState({
       windowWidth: width,
     })

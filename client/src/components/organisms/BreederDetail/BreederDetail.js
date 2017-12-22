@@ -8,6 +8,7 @@ import styles from './BreederDetail.scss';
 import classNames from 'classnames/bind';
 // import BreederList from '../../molecules/BreederList';
 // import BreederIntro from '../../molecules/BreederIntro'
+import Spinner from '../../atoms/Spinner';
 import HomeTemplate from '../../templates/HomeTemplate';
 import FlexBox from '../../atoms/FlexBox';
 import Button from '../../atoms/Button';
@@ -29,7 +30,7 @@ class BreederDetail extends Component {
   state = {
     isSticked: false,
     data: {},
-    loading: false,
+    loading: true,
     lightboxIsOpen: true,
     currentKannelImage: '',
     currentDogImage: '',
@@ -65,7 +66,7 @@ class BreederDetail extends Component {
           data: res.data,
           currentKannelImage: res.data.kannelImage[0],
           currentDogImage: res.data.dogImage[0],
-          loading: true,
+          loading: false,
         })
       })
     window.scroll(0, 0);
@@ -154,7 +155,9 @@ class BreederDetail extends Component {
     //   image: data.breederImage,
     // }
 
-    return !this.state.loading ? <h1>Loading</h1> : (
+    return this.state.loading ?
+      <Spinner loading={this.state.loading} />
+      : (
       <div className={cx('breederDetail')}>
       {/*}  
       <BreederIntro breederIntroData={breederIntroData} />
@@ -189,6 +192,7 @@ class BreederDetail extends Component {
             </div>
             <HomeTemplate
               bar
+              marginTop={'5rem'}
               title={`${data.breederName} 브리더(breeder)`}
               subTitle={data.breederDescription}
             />
@@ -235,6 +239,7 @@ class BreederDetail extends Component {
           </div>
           <div name={'dog'} className={cx('element')}>
             <HomeTemplate
+              width={'50%'}
               bar
               title={`브리더가 말하는 ${data.kannelBreed}`}
               subTitle={data.dogWord}

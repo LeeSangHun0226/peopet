@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 const PageTemplate = ({ location, header, children, responsive, padding, position }) => {
   return (
     <div className={cx('page')}>
-      <header className={cx('header', location)}>
+      <header className={cx('header',  location)}>
         {header}
       </header>
       <main className={cx('content', {

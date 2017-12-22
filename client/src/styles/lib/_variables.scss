@@ -1,5 +1,5 @@
 $breakpoints: (
-  phone: 480px,
+  phone: 576px,
   tablet: 768px, 
   pc: 992px,
   wide: 1200px
@@ -12,16 +12,37 @@ $z-indexes: (
   'dimmer': 35
 );
 
+$font-sizes: (
+  tablet-big: 1.5rem,
+  tablet-small: 1.2rem
+);
+
 $colors: (
   // main: #6caec6
   // main: #30AFC7
   // main: #4dd0e1
   // main: #40c4ff
   soft-main: #dceff5,
-  main: #3ecae5,
+  // font: #516378,
+  // main: #448aff,
+  // main: #2962ff,
+  // main: #6CAEC6,
+  // main: #49CCEA,
+  review: #00bcd4,
   grey: #f4f4f4,
   beige: #fffef8,
   black: #141414,
-  font:#424242,
+  // font:#616161,
+  
+  review-content: #616161,
+  green: #618b4b,
+  dark-grey: #616161,
   // main: rgb(108, 174, 198)
+
+
+  main: #00BFA5,
+  font: #141414,
+  layout: #dcc7aa,
+  apple-core: #e2dacf
+
 )

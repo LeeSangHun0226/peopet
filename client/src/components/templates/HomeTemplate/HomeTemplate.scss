@@ -1,7 +1,12 @@
 @import 'utils';
 
 .page {
-  margin-top: 3rem;
+  margin-top: 10rem;
+
+  @include media('<tablet') {
+    margin-top: 5rem;
+  }
+
   .content {
     padding-top: 1.5rem;
     padding-bottom: 2.5rem;
@@ -9,55 +14,71 @@
     @include media("<tablet") {
       padding-bottom: 1rem;
     }
-    // &.padding {
-    //   padding-top: 3.5rem;
-    // }
-    // &.responsive {
-    //   padding-left: 2rem;
-    //   padding-right: 2rem;
-    //   @include responsive();
-    //   width: 50%;
-    //   background: blue;
-    // }
 
     .title-wrapper {
-      // width: 50%;
-      // margin: auto;
+      text-align: center;
+
+      .title-image {
+        width: 15rem;
+
+        @include media("<tablet") {
+          width: 12rem;
+        }
+      }
 
       .title {
         width: 60%;
         margin-left: auto;
         margin-right: auto;
         text-align: center;
-        color: color(font);
+        color: color(main);
         // color: #141414;
-        font-size: 1.5rem;
+        font-size: 1.7rem;
         // padding-bottom: 1rem;
         // text-decoration: underline;
       }
 
+      .point {
+        margin: auto;
+        width: 30px;
+        height: 3px;
+        border: 0.5px solid color(main);
+        background-color: color(main);
+        margin-top: 2rem;
+        margin-bottom: 2rem; 
+
+        @include media('<tablet') {
+          width: 15px;
+        }
+      }
+
       .sub-title-wrapper {
-        width: 100%;
         padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-        margin-bottom: 4rem;
 
         &.bar {
           // background: rgb(231, 230, 230);
-          background: color(grey);
+          // background: color(grey);
+          width: 85%;
+          margin: auto;
+          
+          padding-bottom: 1.5rem;
+          margin-bottom: 4rem;
 
           @include media("<tablet") {
             margin-bottom: 2rem;
+            width: 90%;
           }
         }
 
         .sub-title {
           // width: 30%;
+          color: color(font);
           margin: auto;
           margin-top: 0;
           margin-bottom: 0;
           text-align: center;
-          font-size: 1.3rem;;
+          font-size: 1.4rem;;
+          line-height: 180%;
 
         }    
         

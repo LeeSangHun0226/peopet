@@ -6,8 +6,8 @@ import Breeder from '../../organisms/Breeder';
 const BreederPage = ({ authed, match, history }) => {
   return (
     <PageTemplate
-      header={<HeaderContainer authed={authed} location="home" />}
-      location="home"
+      header={<HeaderContainer authed={authed} location="breeders" />}
+      location="breeder"
     >
       <Breeder history={history} />
     </PageTemplate>

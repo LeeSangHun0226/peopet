@@ -7,13 +7,14 @@ import update from 'react-addons-update';
 import styles from './Breeder.scss';
 import classNames from 'classnames/bind';
 import BreederList from '../../molecules/BreederList';
-import BreederIntro from '../../molecules/BreederIntro'
+import Spinner from '../../atoms/Spinner';
+// import BreederIntro from '../../molecules/BreederIntro'
 // import breederLabrador from '../../../images/breeder-labrador.jpg';
 // import breeder1 from '../../../images/breeder1.jpg';
-import HomeTemplate from '../../templates/HomeTemplate';
+// import HomeTemplate from '../../templates/HomeTemplate';
 import arrowLeftImg from '../../../images/arrow-left.png';
 import arrowRightImg from '../../../images/arrow-right.png';
-import breederHeaderImg from '../../../images/breeder-header.jpg';
+// import breederHeaderImg from '../../../images/breeder-header.jpg';
 import { fetchServerConfig } from '../../../config';
 
 const cx = classNames.bind(styles);
@@ -31,8 +32,10 @@ function SampleNextArrow(props) {
     <button
       className={cx('next-arrow')}
       onClick={onClick}
-    >
-      <img src={arrowRightImg} alt="arrow-right" className={cx('arrow-img')}/>
+    >&gt;
+    {/*}  
+    <img src={arrowRightImg} alt="arrow-right" className={cx('arrow-img')}/>
+  */}
     </button>
   );
 }
@@ -43,14 +46,12 @@ function SamplePrevArrow(props) {
     <button
       className={cx('prev-arrow')}
       onClick={onClick}
-    >
-      <img src={arrowLeftImg} alt="arrow-left" className={cx('arrow-img')} />
+    >&lt;
+    {/*}  
+    <img src={arrowLeftImg} alt="arrow-left" className={cx('arrow-img')} />
+  */}
     </button>
   );
-}
-
-const breederIntroData = {
-  image: breederHeaderImg,
 }
 
 class Breeder extends Component {
@@ -58,7 +59,7 @@ class Breeder extends Component {
   state = {
     isSticked: false,
     dogListData: [],
-    loading: false,
+    loading: true,
     isFirstActived: false,
     currentIndex: -1,
     perviousIndex: -1,
@@ -73,7 +74,7 @@ class Breeder extends Component {
       .then((res) => {
         this.setState({
           dogListData: res.data,
-          loading: true,
+          loading: false,
         })
       })
       .catch(err => console.log(err))
@@ -184,8 +185,12 @@ class Breeder extends Component {
         }
       }]
     }
-    return !this.state.loading ? <h1>Loading</h1> : (
+    return this.state.loading ? 
+      <Spinner loading={this.state.loading}/>
+     : (
+    // return(
       <div className={cx('breeder')}> 
+        
         {/*}
         <BreederIntro breederIntroData={breederIntroData} />
         <HomeTemplate

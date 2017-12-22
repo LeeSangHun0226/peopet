@@ -18,9 +18,10 @@ class Partner extends Component {
       arrows: false,
       autoplay: true,
       speed: 500,
-      // autoplaySpeed: 2,
-      // pauseOnFocus: true,
-      // pauseOnHover: true,
+      // centerMode: true,
+      autoplaySpeed: 2,
+      pauseOnFocus: true,
+      pauseOnHover: true,
       pauseOnDotsHover: false,
       cssEase: 'linear',
       infinite: true,
@@ -65,9 +66,7 @@ class Partner extends Component {
           {
             images.map((data, i) => (
               <div key={i}>
-                <a href="http://blog.naver.com/peopet/221092557955">
-                  <img className={cx('image')} src={data.img} alt={`partner${i}`} />
-                </a>
+                <img className={cx('image')} src={data.img} alt={`partner${i}`} />
                 {data.description}
               </div>
             ))
@@ -79,3 +78,5 @@ class Partner extends Component {
 }
 
 export default Partner;
+
+//<a href="http://blog.naver.com/peopet/221092557955">

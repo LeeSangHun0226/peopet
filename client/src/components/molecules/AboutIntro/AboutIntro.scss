@@ -1,0 +1,122 @@
+@import 'utils';
+
+.page {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  // position: relative;
+  // display: flex;
+  // flex-direction: row-reverse;
+  // flex: 1 1 50%;
+  
+  @include media('<tablet') {
+    flex-direction: column;
+  }
+
+  &.left {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    // display: flex;
+    flex-direction: row;
+    // background: color(grey);
+    background: color(apple-core);
+
+    @include media('<tablet') {
+     flex-direction: column;
+    }
+
+  }
+
+  .image-wrapper {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+
+    .image {
+      width: 15rem;
+
+      &.dog {
+        width: 20rem;
+      }
+
+      &.map {
+        width: 20rem;
+      }
+
+      &.together {
+        width: 18rem;
+      }
+    }
+  }
+
+  .title-wrapper{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+
+    @include media('<tablet') {
+      padding-top: 5rem;
+    }
+
+    .title {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0;
+      margin-bottom: 0;
+      width: 100%;
+      color: color(main);
+      font-weight: 600;
+      // margin-bottom: 2rem;
+      font-size: 1.7rem;
+
+      @include media('<tablet') {
+        // font-weight: 300;
+        // font-weight: 700;
+        width: 70%;
+      }
+    }
+
+    .bar {
+      margin: auto;
+      width: 30px;
+      height: 3px;
+      border: 0.5px solid color(main);
+      background-color: color(main);
+      margin-top: 2rem;
+      margin-bottom: 2rem; 
+
+      @include media('<tablet') {
+        width: 15px;
+      }
+    }
+
+    .sub-title {
+      width: 100%;
+      margin: auto;
+
+      .label {
+        font-size: 1.4rem;
+        padding-top: 2rem;
+        padding-bottom: 0.5rem;
+        font-weight: 500;
+        color: color(font);
+      }
+
+      .description {
+        font-size: 1.4rem;
+        margin: 0;
+        padding: 0;
+        line-height: 180%;
+        color: color(font);
+      }
+
+      .sub-description {
+        font-size: 1.2rem;
+        margin: 0;
+        padding: 0;
+        line-height: 180%;
+        color: color(font);
+        // text-align: left;
+      }
+    }
+  }
+}

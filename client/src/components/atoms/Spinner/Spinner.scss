@@ -1,0 +1,17 @@
+@import 'utils';
+
+.spinner-wrapper {
+  height: 600px;
+  width: 100%;
+  display: flex;
+  background: transparent;
+  justify-content: center;
+  text-align: center;
+  
+
+  .spinner {
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+  }
+}
