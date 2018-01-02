@@ -1,9 +1,17 @@
 import React from 'react';
 import styles from './HomeContentFlexBox.scss';
+import Bar from '../../atoms/Bar';
 import classNames from 'classnames/bind'
 const cx = classNames.bind(styles);
 
-const HomeContentFlexBox = ({ images, pc, tablet, onClick, content }) => {
+const HomeContentFlexBox = ({
+  why,
+  images,
+  pc,
+  tablet,
+  onClick,
+  content
+}) => {
 
   return (
     <div className={cx('content', content)}>
@@ -24,6 +32,7 @@ const HomeContentFlexBox = ({ images, pc, tablet, onClick, content }) => {
                       <p key={i} className={cx('description', content)}>{text}</p>
                     ))
                   }
+                  <Bar short/>
                   <h4 className={cx('title')}>
                     by&nbsp;{image.breed}&nbsp;보호자
                   </h4>

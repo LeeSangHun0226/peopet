@@ -10,19 +10,7 @@
     z-index: z-index-for('header');
     
     &.home {
-      position: fixed;
+      position: absolute;
     }
-
   }
-
-  // .content {
-  //   &.padding {
-  //     padding-top: 3.5rem;
-  //   }
-  //   &.responsive {
-  //     padding-left: 1rem;
-  //     padding-right: 1rem;
-  //     @include responsive();
-  //   }
-  // }
 }

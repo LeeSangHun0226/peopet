@@ -8,7 +8,7 @@
   margin: auto;
 
   &.review {
-    width: 100%;
+    width: 80%;
     // margin-bottom: 5rem;
     // @include media('<wide') {
     //   margin: auto
@@ -21,7 +21,7 @@
   }
 
   .image {
-    flex: 0 1 calc(100%/3 - 1px);
+    flex: 0 1 calc(100%/4 - 1px);
     text-align: center;
     margin: 1rem;
 
@@ -41,24 +41,26 @@
 
       @include media('<tablet') {
         // margin: 0;
-        flex: 0 1 calc(100%);
+        flex: 0 1 calc(50%);
         text-align: center;
         
       }
   }
 
     .img {
-      width: 7rem;
-
-      &.review {
-        // width: 80%;
-        width: 50%;
-        border-radius: 50%;
+      width: 50%;
+      border-radius: 50%;
+      margin-bottom: 2rem;
         
+      @include media('<tablet') {
+        width: 70%;
+      }
+
+      &.why {
+        width: 50%;
 
         @include media('<tablet') {
-          width: 50%;
-          text-align: center;
+          width: 70%;
         }
       }
     }
@@ -73,31 +75,25 @@
       }
 
       .title {
-        color: color(main);
-        font-size: 1.7rem;
-        font-weight: 600;
+        color: color(hard-grey);
+        font-size: 1.3rem;
+        font-weight: 500;
       }
     }
 
 
     .description {
-      font-size: 1.4rem;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-      color: color(main);
-      font-weight: 500;
+      font-size: 1.3rem;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin: 0;
+      // line-height: 160%;
+      color: color(hard-grey);
+      font-weight: 300;
 
-      &.review {
-        padding-top: 0;
-        padding-bottom: 1rem;
-        width: 100%;
-        margin: auto;
-        color: color(font);
-        line-height: 180%;
-        
-        // font-size: 0.8rem;
-        // font-size: 1.2rem;
-        // color: color(font);
+      &.why {
+        color: color(main);
+        font-weight: 500;
       }
     }
   }

@@ -1,0 +1,20 @@
+@import 'utils';
+
+.bar {
+  width: 5rem;
+  height: 0.5rem;
+  background: linear-gradient( to bottom right, #448aff, #768aff );
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem; 
+
+  &.short {
+    width: 5rem;
+    height: 0.2rem;
+  }
+
+  &.wide {
+    background: white;
+  }
+}

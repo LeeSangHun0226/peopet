@@ -54,6 +54,7 @@ const AboutIntro = ({ image, title, subTitle, position, attribute, children }) =
           )
         }
       </div>
+      {children}
   </div>
   );
 };

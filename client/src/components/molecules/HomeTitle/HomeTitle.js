@@ -9,20 +9,22 @@ import Button from '../../atoms/Button';
 
 const cx = classNames.bind(styles);
 
-const HomeTitle = ({ authed, location }) => {
+const HomeTitle = ({
+  authed,
+  location,
+  image,
+}) => {
   return (
     <div className={cx('page')}>
       <div className={cx('wrapper')}>
         <div className={cx('background')} />
         <div className={cx('content-wrapper')}>
           <div className={cx('content')}>
-            <h2 className={cx('title')}>
-              태어난 곳을 확인할 수 있는<br/>
-              <b>반려견 입양 서비스</b>
-            </h2>
+            <h2 className={cx('title')}>태어난 곳을 확인할 수 있는</h2>
+            <img className={cx('title-image')} src={image} alt="home-title-img" />
             <Link to="/support">
-              <Button className={cx('go')} padding={'12px'}>
-                입양하러가기
+              <Button square className={cx('go')} padding={'12px'}>
+                지금 바로 입양하러 가기&gt;&gt; 
               </Button>
             </Link>
           </div>

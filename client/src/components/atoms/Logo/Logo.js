@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Logo.scss';
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
-import logoImg from '../../../images/head-logo1.png';
+import logoImg from '../../../images/head-logo.png';
 
 const cx = classNames.bind(styles);
 

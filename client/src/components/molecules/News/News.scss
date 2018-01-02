@@ -1,0 +1,82 @@
+@import 'utils';
+
+* {
+  min-height: 0;
+  min-width: 0;
+}
+
+.news {
+  background: white;
+  width: 100%;
+  height: 40%;
+  position: relative;
+  // display: flex;
+
+  .slider-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 75%;
+    top: 50%;
+    margin: auto;
+
+    @include media("<tablet") {
+      width: 90%;     
+    }
+
+    // position: absolute;
+
+    .slider {
+      padding-bottom: 4rem;
+
+    .slick-arrow {
+      display: none;
+    }
+
+    .slick-next {
+      display: none;
+    }
+
+    
+    .page {
+
+      .image-wrapper {
+        &:hover {
+            background: blue;
+          }
+
+        .image {
+          width: 10rem;
+          border-radius: 50%;
+          margin: auto;
+
+
+          @include media("<tablet") {
+            width: 10rem;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      .bar {
+        width: 100%;
+        height: 1px;
+        background: color(main);
+      }
+
+      .content-wrapper {
+        text-align: center;
+        color: color(hard-grey);
+
+        .title {
+          font-size: 1.4rem;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+  
+}

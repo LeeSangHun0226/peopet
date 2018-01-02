@@ -16,6 +16,11 @@
   user-select: none;
 
   // default
+
+  &.square {
+    border-radius: 0;
+  }
+
   background: color(green);
   &:hover {
     background: material-color('grey', '400');

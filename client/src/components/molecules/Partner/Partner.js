@@ -19,14 +19,14 @@ class Partner extends Component {
       autoplay: true,
       speed: 500,
       // centerMode: true,
-      autoplaySpeed: 2,
+      // autoplaySpeed: 3000,
       pauseOnFocus: true,
       pauseOnHover: true,
       pauseOnDotsHover: false,
       cssEase: 'linear',
       infinite: true,
       slidesToShow: 5,
-      slidesToScroll: 1,
+      slidesToScroll: 2,
       responsive: [{ 
         breakpoint: 1600,
         settings: { 

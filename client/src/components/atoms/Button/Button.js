@@ -18,6 +18,7 @@ const Button = ({
   disabled,
   width,
   breeder,
+  square,
   ...rest
 }) => {
 
@@ -36,6 +37,7 @@ const Button = ({
           flat,
           disabled,
           roundCorner,
+          square,
           breeder,
         }, color, className)
       }

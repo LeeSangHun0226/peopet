@@ -9,24 +9,66 @@ import AboutIntro from '../../molecules/AboutIntro';
 import HomeContentFlexBox from '../../molecules/HomeContentFlexBox';
 import Banner from '../../molecules/Banner';
 import Partner from '../../molecules/Partner';
+import Adoption from '../../molecules/Adoption';
+import News from '../../molecules/News';
+import TextBar from '../../atoms/TextBar';
 
-import homeIntroImg1 from '../../../images/home-intro1.png';
-import homeIntroImg2 from '../../../images/home-intro2.png';
-import homeIntroImg3 from '../../../images/home-intro3.png';
-import homeIntroImg4 from '../../../images/home-intro4.png';
+import homeTitleImg from '../../../images/home-title.png';
 
+import homeAdoptionImg from '../../../images/home-adoption.png';
+import homeAdoptionSibaImg1 from '../../../images/home-adoption-siba1.png';
+import homeAdoptionSibaImg2 from '../../../images/home-adoption-siba2.png';
+import homeAdoptionSibaImg3 from '../../../images/home-adoption-siba3.png';
+import homeAdoptionSibaImg4 from '../../../images/home-adoption-siba4.png';
+import homeAdoptionLineImg from '../../../images/home-adoption-line.png';
+
+import homeNewsImg from '../../../images/home-news.png';
+import homeNewsCenterImgDefault from '../../../images/home-news-center-default.png';
+import homeNewsCenterImgHover from '../../../images/home-news-center-hover.png';
+import homeNewsCityImgDefault from '../../../images/home-news-city-default.png';
+import homeNewsCityImgHover from '../../../images/home-news-city-hover.png';
+import homeNewsDailyImgDefault from '../../../images/home-news-daily-default.png';
+import homeNewsDailyImgHover from '../../../images/home-news-daily-hover.png';
+import homeNewsEverydayImgDefault from '../../../images/home-news-everyday-default.png';
+import homeNewsEverydayImgHover from '../../../images/home-news-everyday-hover.png';
+import homeNewsFutureImgDefault from '../../../images/home-news-future-default.png';
+import homeNewsFutureImgHover from '../../../images/home-news-future-hover.png';
+import homeNewsOneImgDefault from '../../../images/home-news-one-default.png';
+import homeNewsOneImgHover from '../../../images/home-news-one-hover.png';
+import homeNewsSeoulImgDefault from '../../../images/home-news-seoul-default.png';
+import homeNewsSeoulImgHover from '../../../images/home-news-seoul-hover.png';
+import homeNewsVentureImgDefault from '../../../images/home-news-venture-default.png'
+import homeNewsVentureImgHover from '../../../images/home-news-venture-hover.png';
+
+import homeTogetherImg from '../../../images/home-together.png';
+
+import homeBreederImg from '../../../images/home-breeder.png';
+
+import homeWhatImg from '../../../images/home-what.png';
+
+import homeUniverseImg from '../../../images/home-universe.png';
+
+import homeServiceImg from '../../../images/home-service.png';
+import homeServiceTitleImg from '../../../images/home-service-title.png';
+import homeServiceCallImg from '../../../images/home-service-call.png';
+import homeServiceVisitImg from '../../../images/home-service-visit.png';
+import homeServiceEducationImg from '../../../images/home-service-education.png';
+import homeServicePriceImg from '../../../images/home-service-price.png';
+import homeServiceAdoptionImg from '../../../images/home-service-adoption.png';
+import homeServiceManagementImg from '../../../images/home-service-management.png';
+
+import homeWhyImg from '../../../images/home-why.png';
+
+import homeReviewImg from '../../../images/home-review.png';
 import review1Img from '../../../images/home-review1.jpeg';
 import review2Img from '../../../images/home-review2.jpeg';
 import review3Img from '../../../images/home-review3.jpeg';
 import review4Img from '../../../images/home-review4.jpeg';
 
-import serviceTitleImg from '../../../images/home-service-title.png';
-import serviceImg1 from '../../../images/home-service1.png';
-import serviceImg2 from '../../../images/home-service2.png';
-import serviceImg3 from '../../../images/home-service3.png';
-import serviceImg4 from '../../../images/home-service4.png';
-import serviceImg5 from '../../../images/home-service5.png';
-import serviceImg6 from '../../../images/home-service6.png';
+import homeBannerImg from '../../../images/home-banner.jpeg';
+import homeBannerTitleImg from '../../../images/home-banner-title.png';
+
+import homeKakaoImg from '../../../images/home-kakao.png';
 
 import partner1Img from '../../../images/partner1.png';
 import partner2Img from '../../../images/partner2.png';
@@ -39,26 +81,20 @@ import partner8Img from '../../../images/partner8.png';
 import partner9Img from '../../../images/partner9.png';
 import partner10Img from '../../../images/partner10.png';
 
-import bannerImg from '../../../images/home-banner.jpeg';
-
 const reviewImages = [
-  // { img: review1Img, breed: '댕이', description: '여러 시바 켄넬들을 알아보다가 예쁜 아이를 찾게되어 견사에 방문했어요.<br/>마지막 헤어질 때 엄마 냄새를 기억하라고 손수건에 모견의 체취를 담아주시는 브리더님의 강아지를 생각하는 마음이 참 고마웠어요.'},
-  // { img: review2Img, breed: '망고', description: '입양 전 샵에 방문하거나 블로그 검색을 해봐도 건강한 아이인지 확신하기 어려웠어요.<br/>페오펫의 빠른 상담과 직접 브리더를 방문하고 아이가 자라온 환경을 확인하고 나니 신뢰가 생겼어요.' },
-  // { img: review3Img, breed: '아리', description: '10년 전 펫샵에서 분양받았는데, 공장견의 특성상 파보장염으로 인해 아이가 죽었어요.<br/>페오펫에서는 부모견과 브리더에 관해 전부 확인 가능한 시스템 체계가 굉장히 매력적이었어요.' },
-  // { img: review4Img, breed: '복실이', description: '애견샵에서 잘못 입양 받아 마음 고생 많이 했는데 페오펫을 통해 정말 건강한 말티즈를 입양 받아서 좋아요.<br/>상담 단계에서부터 정말 친절하고 감동이었어요.'} ,
   { img: review1Img, breed: '댕이', description: '강아지를 생각하는<br/>마음이 참 고마웠어요.' },
   { img: review2Img, breed: '망고', description: '아이가 자라온 환경을<br/>확인하니 신뢰가 생겼어요.' },
   { img: review3Img, breed: '아리', description: '투명한 시스템 체계가<br/>굉장히 매력적이었어요.' },
   { img: review4Img, breed: '복실이', description: '상담 단계에서부터 정말<br/>친절하고 감동이었어요.' },
 ];
 
-const whyImages = [
-  { img: serviceImg1, description: '전화' },
-  { img: serviceImg2, description: '견사방문' },
-  { img: serviceImg3, description: '보호자 교육' },
-  { img: serviceImg4, description: '예약금 납부' },
-  { img: serviceImg5, description: '입양' },
-  { img: serviceImg6, description: '사후관리' },
+const homeServiceImages = [
+  { img: homeServiceCallImg, description: '전화' },
+  { img: homeServiceVisitImg, description: '견사방문' },
+  { img: homeServiceEducationImg, description: '보호자 교육' },
+  { img: homeServicePriceImg, description: '예약금 납부' },
+  { img: homeServiceAdoptionImg, description: '입양' },
+  { img: homeServiceManagementImg, description: '사후관리' },
 ]
 
 const partnerImages = [
@@ -73,6 +109,25 @@ const partnerImages = [
   { img: partner9Img },
   { img: partner10Img },
 ]
+
+const adoptionData = [
+  { img: homeAdoptionSibaImg1, title: '왕초켄넬', sex: '암컷', parent: '마사하루&우메미', breed: '시바이누', birthDate: '2017/10/27' },
+  { img: homeAdoptionSibaImg2, title: '왕초켄넬', sex: '수컷', parent: '마사하루&우메미', breed: '시바이누', birthDate: '2017/10/27' },
+  { img: homeAdoptionSibaImg3, title: '왕초켄넬', sex: '수컷', parent: '마사하루&우메미', breed: '시바이누', birthDate: '2017/10/27' },
+  { img: homeAdoptionSibaImg4, title: '왕초켄넬', sex: '수컷', parent: '마사하루&우메미', breed: '시바이누', birthDate: '2017/10/27' },
+]
+
+const newsData = [
+  // { defaultImg: homeNewsCenterImgDefault, currentImg: homeNewsCenterImgDefault, hoverImg: homeNewsCenterImgHover, url: '' },
+  { defaultImg: homeNewsCityImgDefault, currentImg: homeNewsCityImgDefault, hoverImg: homeNewsCityImgHover, url: 'http://www.dosi.or.kr/%ea%b1%b7%ea%b3%a0%ec%8b%b6%ec%9d%80%eb%8f%84%ec%8b%9c-2017-%ea%b0%80%ec%9d%84%ed%98%b8/' },
+  { defaultImg: homeNewsDailyImgDefault, currentImg: homeNewsDailyImgDefault, hoverImg: homeNewsDailyImgHover, url: 'http://www.dailyvet.co.kr/news/industry/75157' },
+  // { defaultImg: homeNewsEverydayImgDefault, currentImg: homeNewsEverydayImgDefault, hoverImg: homeNewsEverydayImgHover, url: '' },
+  { defaultImg: homeNewsFutureImgDefault, currentImg: homeNewsFutureImgDefault, hoverImg: homeNewsFutureImgHover, url: 'http://futurechosun.com/archives/29932' },
+  { defaultImg: homeNewsOneImgDefault, currentImg: homeNewsOneImgDefault, hoverImg: homeNewsOneImgHover, url: 'http://news1.kr/articles/?2959902' },
+  { defaultImg: homeNewsSeoulImgDefault, currentImg: homeNewsSeoulImgDefault, hoverImg: homeNewsSeoulImgHover, url: 'http://www.sedaily.com/NewsView/1OEQFDC1J3' },
+  { defaultImg: homeNewsVentureImgDefault, currentImg: homeNewsVentureImgDefault, hoverImg: homeNewsVentureImgHover, url: 'http://www.venturesquare.net/756965' },
+]
+
 
 const cx = classNames.bind(styles);
 
@@ -117,75 +172,85 @@ class Home extends Component {
 
     return (
       <div style={{ position: 'relative'}}>
-        <HomeTitle />
+        <HomeTitle image={homeTitleImg}/>
         <div className={cx('home')}>
-        <AboutIntro
+        <HomeTemplate
+          bar
+          title="입양 예약 가능한 자견"
+          subTitle={'브리더들을 통해 건강한 사회화를 한<br/>세상에 하나뿐인 가족을 입양하세요!'}
+          titleImage={homeAdoptionImg}
+          big
+        >
+          <Adoption
+            adoptionData={adoptionData}
+            line={homeAdoptionLineImg}
+          />
+        </HomeTemplate>
+        <HomeTemplate
+          bar
+          title="페오펫의 다양한 활동을 만나보세요."
+          subTitle={'언론에 소개되는 페오펫을 만나보세요.<br/>페오펫의 다양한 소식, 활동들을 볼 수 있습니다.'}
+          titleImage={homeNewsImg}
+          middle
+        >
+          <News newsData={newsData} />
+        </HomeTemplate>
+        <HomeTemplate
+          grey
+          bar
+          titleBr
           title="반려동물과 함께하는<br/>행복한 미래를 만듭니다."
-          subTitle={[
-            {
-              label: '',
-              description: "세상에는 너무나 많은 반려 동물들이 우리와 함께 살아가고 있습니다.<br/>하지만 지금까지 우리는 충분히 반려동물을 맞이할 준비를 하지 못했습니다.<br/>그래서 우리는 입양의 단계가 가장 먼저 바뀌어야 한다고 생각했습니다.<br/>페오펫은 견종의 번식을 담당하는 전문적인 ‘브리더’로부터 입양받는<br/>성숙한 반려견 입양 문화를 만들기 위해 노력하고 있습니다.",
-            },
-            {
-              label: "브리더란?",
-              subDescription: "단일 견종의 특성에 대한 이해를 바탕으로 견종의 질을 보존하며<br/>윤리적으로 종의 번식을 하는 반려견 전문인을 말합니다."
-            }
-          ]}
-          image={homeIntroImg1}
-          position="right"
+          subTitle={"세상에는 수많은 반려 동물들이 살아가고 있습니다.<br/>그리고 무분별한 번식은 '강아지 공장'을 만들었습니다.<br/>페오펫은 '강아지 공장'대신 윤리적으로 번식을 하는<br/>전문 '브리더'에게 입양을 받는 올바른 문화를 지향합니다."}
+          titleImage={homeTogetherImg}
         />
-        <AboutIntro
+        <HomeTemplate
+          titleImage={homeBreederImg}
+          bar
+          subTitle="단일 견종의 특성에 대한 이해를 바탕으로 견종의 질을 보존하며<br/>윤리적으로 종의 번식을 하는 반려견 전문인을 말합니다."
+          wide
+        />
+        <HomeTemplate
+          grey
+          bar
           title="페오펫은 무엇을 해결하는가?"
-          image={homeIntroImg2}
-          subTitle={[
-            {
-              label: '',
-              description: "페오펫은 작은 움직임이 가지고 오는 큰 변화를 믿고 있습니다.<br/>강아지 공장의 문제 해결을하려고 합니다.<br/>"
-            }
-          ]}
-          position="left"
-          attribute="dog"
-        />
-        <AboutIntro
-          title="세상에 영향력을 끼쳐라"
-          image={homeIntroImg3}
-          attribute="map"
-          subTitle={[
-            {
-              label: '',
-              description: "페오펫은 행동에 그 이상의 의미가 담길 수 있다고 생각합니다. 브리더를 통해 반려견을 입양하는 것은 강아지 공장의 문제를 해결하는 것에 큰 영향을 미칠 수 있습니다. 우리가 하는 일이 세상에 선한 영향력을 미쳐 큰 변화를 만들어낼 수 있음을 믿고 있습니다."
-            }
-          ]}
-          position="right"
-        />
-        <AboutIntro
-          title="페오펫의 사명"
-          image={homeIntroImg4}
-          subTitle={[
-            {
-              label: '',
-              description: '전문 브리더들로부터 입양을 받는 성숙한 문화를 통하여 사람과 반려동물이 한 생명체로서 더불어 살아갈 수 있는 사회를 만들고자 노력합니다.'
-            }
-          ]}
-          position="left"
-          attribute="together"
+          titleImage={homeWhatImg}
+          subTitle={"브리더 입양문화를 통해 성숙한 반려문화를 만듭니다.<br/>'페오펫이 건전한 반려문화를 선도하겠습니다.'"}
         />
         <HomeTemplate
           bar
-          subTitle="페오펫은 직접 견사들을 방문하며 해당 견종에<br/>전문 지식을 가지고 건강하게 강아지를 길러내는<br/>브리더분들과 협업을 하고 있습니다."
-          titleImage={serviceTitleImg}
-          point
+          bigImage
+          title="세상에 영향력을 끼쳐라"
+          titleImage={homeUniverseImg}
+          subTitle={"우리가 하는 일이 세상에 선한 영향력을 미쳐<br/>큰 변화를 만들어낼 수 있음을 믿고 있습니다."}
+        />
+        <HomeTemplate
+          bar
+          title="우리의 서비스"
+          subTitle="페오펫은 단순히 입양을 중개하는 것이 아닌<br/>입양을 문화로 만드는 서비스를 제공하고 있습니다."
+          titleImage={homeServiceImg}
+          big
+          grey
         >
           <HomeContentFlexBox
             content="why"
             pc="3"
             tablet="2"
-            images={whyImages}
+            images={homeServiceImages}
           />
         </HomeTemplate>
         <HomeTemplate
-          title="페오펫에서 입양한 사람들의 후기"
-          point
+          bar
+          titleImage={homeWhyImg}
+          subTitle="가정분양이나 무분별한 번식장은<br/>해당견종의 유전형질을 고려하지 않은 번식으로 인해<br/>치명적인 질병의 발생 가능성이 높아지기 때문입니다."
+          wide
+        />
+        <HomeTemplate
+          titleImage={homeReviewImg}
+          review
+          middle
+          bar
+          title="가족이 된 아이들"
+          subTitle="페오펫에서 가족을 입양한<br/>다양한 후기들을 만나보세요!"
         >
           <HomeContentFlexBox
             content="review"
@@ -193,27 +258,25 @@ class Home extends Component {
             onClick={handleClick}
           />
         </HomeTemplate>
+        {/*
         <HomeTemplate
           marginTop={0}
         >
-          <Banner image={bannerImg} />
+          <Banner image={homeBannerImg} />
         </HomeTemplate>
+        */}
+        <TextBar
+          title="좀더 빠른 상담을 원하시면 '플러스친구'를 추가해주세요."
+          image={homeKakaoImg}
+          description="페오펫"
+        />
         <HomeTemplate
           marginTop={0}
-          bar
-          title="페오펫 x 제휴사"
-          subTitle="페오펫을 통해 소중한 가족을 분양받고<br/>수많은 제휴사를 통해 더 많은 혜택을 누리세요!"
+          short
+          subTitle="페오펫은 폭넓은 제휴 서비스를 제공하고 있으며<br/>반려견과 견주의 교감을 위해 항상 고민하고 연구합니다."
         >
           <Partner images={partnerImages} />
         </HomeTemplate>
-        <Modal
-          isOpen={this.state.modalIsOpen}
-          style={customStyles}
-          shouldCloseOnOverlayClick={false}
-          contentLabel="Example Modal"  
-        >
-          <HomeReviewModal review={this.state.review} />
-        </Modal>
       </div>
     </div>
     );

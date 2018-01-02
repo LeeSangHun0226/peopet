@@ -6,24 +6,18 @@
   align-items: center;
   padding-left: 1rem;
   padding-right: 1rem;
-  font-size: 1.2rem;
-  color: black;
+  font-size: 1.4rem;
+  color: white;
   opacity: 0.9;
   cursor: pointer;
   transition: all .3s;
   user-select: none;
   height: 40px;
 
-  &.home {
-    // color: color(grey);
-    color: material-color('grey', '600');
-
-  }
-
   &:hover {
     font-weight: 700;
     opacity: 1;
-    color: color('main');
+    color: color(hard-grey);
   }
 
   &.responsive {
