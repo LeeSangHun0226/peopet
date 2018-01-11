@@ -8,11 +8,14 @@ const TextBar = ({
   title,
   image,
   description,
+  link,
 }) => {
   return (
     <div className={cx('text-bar')}>
       <p className={cx('title')}>{title}</p>
-      <img className={cx('image')} src={image} alt="home-kakao-img" />
+      <a href={link}>
+        <img className={cx('image')} src={image} alt="home-kakao-img" />
+      </a>
       <p className={cx('description')}>{description}</p>
     </div>
   );

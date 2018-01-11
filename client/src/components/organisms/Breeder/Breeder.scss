@@ -1,160 +1,43 @@
 @import 'utils';
 
-.spinner-wrapper {
-  height: 600px;
+.Breeder {
   width: 100%;
-  display: flex;
-  background: transparent;
-  // margin: auto;
-  justify-content: center;
-  text-align: center;
-  
+  background: color('soft-grey');
+  padding-bottom: 5rem;
 
-  .spinner {
-    margin: auto;
-    text-align: center;
-    justify-content: center;
-    // height: 100%;
-  }
-}
+  .page {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
 
-
-.next-arrow {
-  font-size: 1rem;
-  line-height: 0;
-  top: 50%;
-  right: -30px;
-  position: absolute;
-  border: 0;
-  width: 20px;
-  height: 20px;
-  transform: translate(0, -50%);
-  cursor: pointer;
-  background: transparent;
-  outline: 0;
-
-  &:hover {
-    color: color(main)
-  }
-
-  .arrow-img {
-    width: 100%;
-    // height: 20px;
-  }
-}
-
-.prev-arrow {
-  font-size: 1rem;
-  line-height: 0;
-  top: 50%;
-  left: -30px;
-  position: absolute;
-  border: 0;
-  width: 20px;
-  height: 20px;
-  transform: translate(0, -50%);
-  cursor: pointer;
-  background: transparent;
-  outline: 0;
-
-  &:hover {
-    color: color(main)
-  }
-
-  .arrow-img {
-    width: 100%;
-    // height: 20px;
-  }
-}
-
-.breeder {
-  height: 100%;
-  width: 100%;
-  max-width: 100%;
-
-  .element {
-    // height:600px;
-    background: white;
-    // padding-top: 5rem;
-    // padding-bottom: 5rem;
-    // margin-top: 10rem;
-    // padding-left:10px;
-    overflow-y: auto;
-    box-sizing: border-box;
-    overflow-x: hidden;
-
-    @include media('<tablet') {
-      padding: 0;    
-      margin-top: 2rem;
-      margin-bottom: 2rem;
+    @include media("<wide") {
+      width: 85%;
     }
-  }
 
-  // .active {
-  // 	color:red !important;
-  // }
-  .navbar {
-    width: 100%;
-    max-width: 100%;
-    position: relative;
-    padding: 2rem;
-    margin-bottom: 0px !important;
-    top: 0;
-    background-color: #fff;
-    box-sizing: border-box;
-    display: flex;
-    // align-content: center;
-    // justify-content: center;
-    // border: 10px;
-    box-shadow: 2px 2px 2px #888888;
-    // position: fixed;
-
-    &.isSticked {
-      position: fixed;
-    }  
-
-    .nav {
-      margin: auto;
-      padding: 0;
+    @include media("<pc") {
       width: 90%;
-      list-style: none;
+    }
+
+    @include media("<tablet") {
+      width: 95%;
+    }
+
+    .content {
+      width: 100%;
       display: flex;
-      align-content: center;
+      flex-flow: row wrap;
+      flex: 0 1 calc(100%/3);
       justify-content: center;
-      
+      align-items: center;
 
-      .li {
-        display:inline-block;
-        // padding:5px;
-        box-sizing: border-box;
-        cursor: pointer;
-        display: flex;
-        align-content: center;
-        justify-content: center;
-        text-align: center;
-
-      &:hover {
-        color: color(main);
-        
-      }
-
-        .link {
-          width: 100%;
-          font-size: 1.2rem;
-          color: color(font);
-
-          &:hover {
-            font-size: 1.3rem;
-            color: color(main)
-          }
-
-          &.active {
-            color: color(main)
-          }
-        }
+      @include media("<tablet") {
+        // flex: 0 1 50%;
       }
     }
   }
+
+  
 }
 
 

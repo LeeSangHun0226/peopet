@@ -1,0 +1,11 @@
+@import 'utils';
+
+.detail-info {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+
+  @include media("<tablet") {
+    display: inline-block;
+  }
+}

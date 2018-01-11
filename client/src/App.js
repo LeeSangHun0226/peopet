@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { DotLoader } from 'react-spinners';
-
+// import { DotLoader } from 'react-spinners';
 import Spinner from './components/atoms/Spinner';
 import HomePage from './components/pages/HomePage';
 import BreederPage from './components/pages/BreederPage';

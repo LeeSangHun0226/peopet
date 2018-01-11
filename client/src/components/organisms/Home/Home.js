@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
-import Modal from 'react-modal';
 import styles from './Home.scss';
 import classNames from 'classnames/bind';
 import HomeTitle from '../../molecules/HomeTitle';
-import HomeReviewModal from '../../molecules/HomeReviewModal';
 import HomeTemplate from '../../templates/HomeTemplate';
-import AboutIntro from '../../molecules/AboutIntro';
 import HomeContentFlexBox from '../../molecules/HomeContentFlexBox';
-import Banner from '../../molecules/Banner';
 import Partner from '../../molecules/Partner';
 import Adoption from '../../molecules/Adoption';
 import News from '../../molecules/News';
@@ -16,6 +12,7 @@ import TextBar from '../../atoms/TextBar';
 import homeTitleImg from '../../../images/home-title.png';
 
 import homeAdoptionImg from '../../../images/home-adoption.png';
+import homeAdoptionMacImg1 from '../../../images/home-adoption-mac1.png';
 import homeAdoptionSibaImg1 from '../../../images/home-adoption-siba1.png';
 import homeAdoptionSibaImg2 from '../../../images/home-adoption-siba2.png';
 import homeAdoptionSibaImg3 from '../../../images/home-adoption-siba3.png';
@@ -23,14 +20,10 @@ import homeAdoptionSibaImg4 from '../../../images/home-adoption-siba4.png';
 import homeAdoptionLineImg from '../../../images/home-adoption-line.png';
 
 import homeNewsImg from '../../../images/home-news.png';
-import homeNewsCenterImgDefault from '../../../images/home-news-center-default.png';
-import homeNewsCenterImgHover from '../../../images/home-news-center-hover.png';
 import homeNewsCityImgDefault from '../../../images/home-news-city-default.png';
 import homeNewsCityImgHover from '../../../images/home-news-city-hover.png';
 import homeNewsDailyImgDefault from '../../../images/home-news-daily-default.png';
 import homeNewsDailyImgHover from '../../../images/home-news-daily-hover.png';
-import homeNewsEverydayImgDefault from '../../../images/home-news-everyday-default.png';
-import homeNewsEverydayImgHover from '../../../images/home-news-everyday-hover.png';
 import homeNewsFutureImgDefault from '../../../images/home-news-future-default.png';
 import homeNewsFutureImgHover from '../../../images/home-news-future-hover.png';
 import homeNewsOneImgDefault from '../../../images/home-news-one-default.png';
@@ -49,7 +42,6 @@ import homeWhatImg from '../../../images/home-what.png';
 import homeUniverseImg from '../../../images/home-universe.png';
 
 import homeServiceImg from '../../../images/home-service.png';
-import homeServiceTitleImg from '../../../images/home-service-title.png';
 import homeServiceCallImg from '../../../images/home-service-call.png';
 import homeServiceVisitImg from '../../../images/home-service-visit.png';
 import homeServiceEducationImg from '../../../images/home-service-education.png';
@@ -65,10 +57,9 @@ import review2Img from '../../../images/home-review2.jpeg';
 import review3Img from '../../../images/home-review3.jpeg';
 import review4Img from '../../../images/home-review4.jpeg';
 
-import homeBannerImg from '../../../images/home-banner.jpeg';
-import homeBannerTitleImg from '../../../images/home-banner-title.png';
-
 import homeKakaoImg from '../../../images/home-kakao.png';
+
+import homeDiaryImg from '../../../images/home-diary-img4.jpeg';
 
 import partner1Img from '../../../images/partner1.png';
 import partner2Img from '../../../images/partner2.png';
@@ -111,6 +102,7 @@ const partnerImages = [
 ]
 
 const adoptionData = [
+  { img: homeAdoptionMacImg1, title: '맥코이힐', sex: '수컷', parent: '메이트&위닝', breed: '토이푸들', birthDate: '2017/10/20'},
   { img: homeAdoptionSibaImg1, title: '왕초켄넬', sex: '암컷', parent: '마사하루&우메미', breed: '시바이누', birthDate: '2017/10/27' },
   { img: homeAdoptionSibaImg2, title: '왕초켄넬', sex: '수컷', parent: '마사하루&우메미', breed: '시바이누', birthDate: '2017/10/27' },
   { img: homeAdoptionSibaImg3, title: '왕초켄넬', sex: '수컷', parent: '마사하루&우메미', breed: '시바이누', birthDate: '2017/10/27' },
@@ -147,28 +139,28 @@ class Home extends Component {
 
   render() {
     const { handleClick } = this;
-    const customStyles = {
-      content: {
-        top: '50%',
-        left: '47%',
-        right: 'auto',
-        bottom: 'auto',
-        width: '90%',
-        marginRight: '-50%',
-        transform: 'translate(-50%, -50%)',
-        padding: '3rem',
-        borderWidth: 0,
-        // backgroundColor: 'rgb(250,247,230)',
-      },
-      overlay: {
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        backgroundColor: 'rgba(255, 255, 255, 0.9)',
-      },
-    }
+    // const customStyles = {
+    //   content: {
+    //     top: '50%',
+    //     left: '47%',
+    //     right: 'auto',
+    //     bottom: 'auto',
+    //     width: '90%',
+    //     marginRight: '-50%',
+    //     transform: 'translate(-50%, -50%)',
+    //     padding: '3rem',
+    //     borderWidth: 0,
+    //     // backgroundColor: 'rgb(250,247,230)',
+    //   },
+    //   overlay: {
+    //     position: 'fixed',
+    //     top: 0,
+    //     left: 0,
+    //     right: 0,
+    //     bottom: 0,
+    //     backgroundColor: 'rgba(255, 255, 255, 0.9)',
+    //   },
+    // }
 
     return (
       <div style={{ position: 'relative'}}>
@@ -188,17 +180,17 @@ class Home extends Component {
         </HomeTemplate>
         <HomeTemplate
           bar
-          title="페오펫의 다양한 활동을 만나보세요."
+          title="페오펫의 다양한<br/>활동을 만나보세요."
           subTitle={'언론에 소개되는 페오펫을 만나보세요.<br/>페오펫의 다양한 소식, 활동들을 볼 수 있습니다.'}
           titleImage={homeNewsImg}
           middle
+   
         >
           <News newsData={newsData} />
         </HomeTemplate>
         <HomeTemplate
           grey
           bar
-          titleBr
           title="반려동물과 함께하는<br/>행복한 미래를 만듭니다."
           subTitle={"세상에는 수많은 반려 동물들이 살아가고 있습니다.<br/>그리고 무분별한 번식은 '강아지 공장'을 만들었습니다.<br/>페오펫은 '강아지 공장'대신 윤리적으로 번식을 하는<br/>전문 '브리더'에게 입양을 받는 올바른 문화를 지향합니다."}
           titleImage={homeTogetherImg}
@@ -258,20 +250,19 @@ class Home extends Component {
             onClick={handleClick}
           />
         </HomeTemplate>
-        {/*
+        <div>
+          <a href="https://blog.naver.com/peopet/221118309091">
+            <img src={homeDiaryImg} alt="home-diary-img" className={cx('home-diary-img')} />
+          </a>
+          </div>
+          <TextBar
+            title="좀더 빠른 상담을 원하시면 '플러스친구'를 추가해주세요."
+            image={homeKakaoImg}
+            description="페오펫"
+            link="http://goto.kakao.com/@peopet"
+          />
         <HomeTemplate
-          marginTop={0}
-        >
-          <Banner image={homeBannerImg} />
-        </HomeTemplate>
-        */}
-        <TextBar
-          title="좀더 빠른 상담을 원하시면 '플러스친구'를 추가해주세요."
-          image={homeKakaoImg}
-          description="페오펫"
-        />
-        <HomeTemplate
-          marginTop={0}
+          // marginTop={0}
           short
           subTitle="페오펫은 폭넓은 제휴 서비스를 제공하고 있으며<br/>반려견과 견주의 교감을 위해 항상 고민하고 연구합니다."
         >

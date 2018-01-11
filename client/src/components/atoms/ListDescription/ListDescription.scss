@@ -1,0 +1,103 @@
+@import 'utils';
+
+* {
+  outline: none;
+}
+
+.ListDescription {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: white;
+  color: color('hard-grey');
+  margin-left: 1rem;
+  font-size: 1.3rem;
+  line-height: 150%;
+  font-weight: 300;
+
+  @include media("<tablet") {
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+
+  .first {
+    background: white;
+  }
+
+  .second {
+    background: white;  
+  } 
+
+  .third {
+    background: white;  
+    flex: 9;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    .description {
+      width: 70%;
+      margin-top: 2rem;
+      margin-left: auto;
+      margin-right: auto;
+
+      @include media("<tablet") {
+        width: 60%;
+      }
+    }
+    
+    .image-wrapper {
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+
+      .image {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+  }
+  
+  .bar {
+    flex: 0.3;
+    background: color('soft-grey');
+
+    @include media("<tablet") {
+      height: 1rem;
+    }
+  }
+
+  .title {
+    width: 80%;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .button {
+    background: color('main');
+    border: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 80%;
+    height: 5rem;
+    border-radius: 1rem;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 300;
+    cursor: pointer;
+    display: inline-block;
+    user-select: none;
+    transition: 0.4s;
+
+    &:hover {
+      background: color('soft-grey');
+      color: color('main');
+    }
+
+    
+  }
+}

@@ -24,7 +24,7 @@ const HomeTitle = ({
             <img className={cx('title-image')} src={image} alt="home-title-img" />
             <Link to="/support">
               <Button square className={cx('go')} padding={'12px'}>
-                지금 바로 입양하러 가기&gt;&gt; 
+                지금 바로 입양하러 가기 
               </Button>
             </Link>
           </div>

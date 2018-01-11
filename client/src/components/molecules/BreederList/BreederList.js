@@ -3,6 +3,7 @@ import styles from './BreederList.scss';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import FlexBox from '../../atoms/FlexBox';
+import Bar from '../../atoms/Bar';
 // import Button from '../../atoms/Button';
 const cx = classNames.bind(styles);
 
@@ -10,62 +11,41 @@ const BreederList = ({
   titleImage,
   title,
   description,
-  breederImage,
   tag,
-  index,
   breederList,
   history,
+  index,
 }) => {
-  const renderDescription = description.split('<br/>');
+  const descriptionText = description.slice(0,30);
+  let breederId;
+  !breederList[0] ? breederId = false : breederId = breederList[0].breederId;
   return (
-    <FlexBox className={cx('breederList')} >      
-      <div>
-        <FlexBox className={cx('page')}>
-          <FlexBox className={cx('titleImage-wrapper')}>
-            <img className={cx('titleImage')} src={titleImage} alt={`breederTitleImage ${index}`} />
-          </FlexBox>
-          <FlexBox column className={cx('main')}>
-            <p className={cx('title')}>
-              {title}
-            </p>
-            {
-              renderDescription.map((description, i) => (
-                <p key={i} className={cx('description')}>
-                  {description}
-                </p>
-              ))
-            }
-            
-            <FlexBox column className={cx('breederImage-wrapper')}>
-              <p className={cx('breederImage-title')}>
-              관련 브리더
-              </p>
-              <div className={cx('wrapper')}>
-               {
-                  breederList.map((breeder, i) => 
-                    <Link key={i} to={`/breeders/${breeder.breederId}`} className={cx('link')}>
-                      <img
-                        className={cx('breederImage')} 
-                        key={i} 
-                        src={breeder.breederImage} 
-                        alt={`breederImage ${i}`}
-                      />
-                    </Link>
-                  )
-                }
-              </div>
-            </FlexBox>
-          </FlexBox>
-        </FlexBox>
-        <FlexBox className={cx('tag-wrapper')}>
-          <div className={cx('layout')}>
+    <div className={cx('BreederList')}>
+        <Link to={`/breeders/${breederId}`} className={cx('link')}>
+        {
+          index !== 0 ? false : <p className={cx('location')}>HOME &gt; <b>BREEDER</b></p>
+        }
+        <div className={cx('image-wrapper')}>
+          <img src={titleImage} alt="title-img" className={cx('image')} />
           {
-            tag.map((tag, i) => <p key={i} className={cx('tag')}>#{tag}</p>)
+            breederList.map((breeder, i) => {
+              return (
+                <img key={i} src={breeder.breederImage} alt="sub-img" className={cx(`sub-image-${i}`)} />
+              )
+            })
           }
-          </div>
-        </FlexBox>
-      </div>
-    </FlexBox>
+        </div>
+        <div className={cx('content-wrapper')}>
+          <h4 className={cx('title')}>{title}</h4>
+          <p className={cx('description')}>{descriptionText}...</p>
+        </div>
+        <div className={cx('tag-wrapper')}>
+          <p className={cx('tag')}>
+            관련브리더 찾아보기
+          </p>
+        </div>
+      </Link>
+    </div>
   )
 };
 

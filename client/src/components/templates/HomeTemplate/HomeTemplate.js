@@ -23,22 +23,48 @@ const HomeTemplate = ({
   short,
   review,
   bigImage,
+  diary,
+  breeder,
+  detail,
 }) => {
   return (
     <div
-      className={cx('page', { wide, big, middle, short, review })}
+      className={cx('page', {
+        wide,
+        big,
+        middle,
+        short,
+        review,
+        diary,
+        breeder,
+        detail,
+       })}
       style={{
         marginTop,
       }}  
     >
       <div className={cx('content', { grey })}>
-        <div className={cx('title-wrapper', { big, middle, short, review })}>
+        <div className={cx('title-wrapper', {
+          big,
+          middle,
+          short,
+          review,
+          diary,
+        })}>
           {
-            !titleImage ? false : <img className={cx('title-image', { wide, bigImage })} src={titleImage} alt='home-service-title-img' />
+            !titleImage
+              ? false
+              : <img className={cx('title-image', {
+                  wide,
+                  bigImage,
+                  breeder,
+                  detail,
+                })} src={titleImage} alt='home-service-title-img'
+                />
           }
           {
-            !titleBr
-              ? <h3 className={cx('title', { wide })}>{title}</h3>
+            !title
+              ? false
               : title.split('<br/>').map((text, i) => {
                   return (
                     <h3 key={i} className={cx('title', { wide, titleBr })}>{text}</h3>
@@ -49,17 +75,17 @@ const HomeTemplate = ({
             !bar ? false : <Bar wide={wide} />
           }
           <div
-            className={cx('sub-title-wrapper')}
+            className={cx('sub-title-wrapper', { diary })}
             style={{
               width,
             }}
-          >        
-          
+          >
             { 
+              !subTitle ? false :
               subTitle.split('<br/>').map((text, i) => {
-              return (
-              <p key={i} className={cx('sub-title', { wide })}>{text}</p>
-            )})}
+                return (
+                <p key={i} className={cx('sub-title', { wide, detail })}>{text}</p>
+              )})}
           </div>
         </div>
       {children}
