@@ -3,7 +3,7 @@ const Breeder = require('../models/breeder');
 exports.oneBreederGet = (req, res) => {
   const { id } = req.params;
   Breeder.findOne({ _id: id }, (err, data) => {
-    if (err) res.send(err);
+    if (err) res.redirect('/');
     return res.json(data);
   });
 };
@@ -20,6 +20,7 @@ exports.saveBreeder = (req, res) => {
     breederImage,
     breederName,
     breederDescription,
+    nameImage,
     kannelName,
     kannelDescription,
     kannelLocation,

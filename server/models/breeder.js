@@ -12,6 +12,7 @@ const Breeder = new Schema({
   breederImage: { type: String },
   breederName: { type: String },
   breederDescription: { type: String },
+  nameImage: { type: String },
   kannelName: { type: String },
   kannelDescription: { type: String },
   kannelLocation: { type: String },
