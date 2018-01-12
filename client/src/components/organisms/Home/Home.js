@@ -59,7 +59,7 @@ import review4Img from '../../../images/home-review4.jpeg';
 
 import homeKakaoImg from '../../../images/home-kakao.png';
 
-import homeDiaryImg from '../../../images/home-diary-img4.jpeg';
+import homeDiaryImg from '../../../images/home-diary-img.jpeg';
 
 import partner1Img from '../../../images/partner1.png';
 import partner2Img from '../../../images/partner2.png';
@@ -184,7 +184,6 @@ class Home extends Component {
           subTitle={'언론에 소개되는 페오펫을 만나보세요.<br/>페오펫의 다양한 소식, 활동들을 볼 수 있습니다.'}
           titleImage={homeNewsImg}
           middle
-   
         >
           <News newsData={newsData} />
         </HomeTemplate>
@@ -260,6 +259,7 @@ class Home extends Component {
             image={homeKakaoImg}
             description="페오펫"
             link="http://goto.kakao.com/@peopet"
+            marginTop={'5rem'}
           />
         <HomeTemplate
           // marginTop={0}

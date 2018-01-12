@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Scroll from 'react-scroll';
-import Slider from 'react-slick';
 import update from 'react-addons-update';
 import styles from './Breeder.scss';
 import classNames from 'classnames/bind';
 import BreederList from '../../molecules/BreederList';
 import Spinner from '../../atoms/Spinner';
-import HomeTeplate from '../../templates/HomeTemplate';
 import { fetchServerConfig } from '../../../config';
 import HomeTemplate from '../../templates/HomeTemplate/HomeTemplate';
 import BreederTitleImg from '../../../images/breeder-title.png';
@@ -93,8 +90,8 @@ class Breeder extends Component {
   
 
   render() {
-    const { isSticked, dogListData } = this.state;
-    const { history } = this.props;
+    const { dogListData } = this.state;
+    const { history, match, location } = this.props;
     return this.state.loading ? 
       <Spinner loading={this.state.loading}/>
      : (
@@ -119,6 +116,8 @@ class Breeder extends Component {
                   id={data._id}
                   breederList={data.breederList}
                   history={history}
+                  match={match}
+                  location={location}
                 />
               ))
             }

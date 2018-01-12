@@ -9,9 +9,13 @@ const TextBar = ({
   image,
   description,
   link,
+  marginTop,
 }) => {
   return (
-    <div className={cx('text-bar')}>
+    <div
+      className={cx('text-bar')}
+      style={{ marginTop }}
+    >
       <p className={cx('title')}>{title}</p>
       <a href={link}>
         <img className={cx('image')} src={image} alt="home-kakao-img" />

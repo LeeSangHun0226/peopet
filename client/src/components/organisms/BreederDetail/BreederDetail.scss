@@ -19,12 +19,12 @@
       color: color('hard-grey');
 
       @include media("<tablet") {
-        margin-top: 2rem;
+        // margin-top: 2rem;
       }
     }
 
     .name-image {
-      padding-top: 5rem;
+      padding-top: 7rem;
       display: flex;
       justify-content: center;
       margin-left: auto;
@@ -47,9 +47,15 @@
       }
 
         .image {
+          margin-bottom: 2rem;
           width: 100%;
         }
       }
+    }
+
+    .image {
+      width: 90%;
+      margin: auto;
     }
   }
 }

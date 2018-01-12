@@ -30,6 +30,15 @@ const Breeder = new Schema({
   }],
   dogWord: { type: String },
   dogDescription: { type: String },
+  puppyImage: [{
+    type: String,
+  }],
+  puppyList: [{
+    puppyId: {
+      type: Schema.Types.ObjectId,
+      ref: 'Puppy',
+    }
+  }],
 });
 
 module.exports = mongoose.model('Breeder', Breeder);

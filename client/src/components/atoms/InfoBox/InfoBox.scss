@@ -1,0 +1,24 @@
+@import 'utils';
+
+.InfoBox {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: 300;
+  width: 100%;
+
+  .title {
+    color: color('main');
+    margin-bottom: 3rem;
+  }
+
+  .image {
+    width: 90%;
+  }
+
+  .description {
+    margin: 0.5rem;
+  }
+
+}

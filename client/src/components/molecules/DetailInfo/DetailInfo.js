@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import Slider from 'react-slick';
+import React from 'react';
+// import Slider from 'react-slick';
 import styles from './DetailInfo.scss';
 import classNames from 'classnames/bind'
 import ImageDescription from '../../atoms/ImageDescription';
@@ -14,6 +14,7 @@ const DetailInfo = ({
   dogDescription,
   kannelBreed,
   kannelName,
+  image,
 }) => {
   const breederData = {
     image: breederImage,
@@ -27,6 +28,7 @@ const DetailInfo = ({
         first={`${breederName} 브리더`}
         second={kannelName}
         third={breederData}
+        image={image}
       /> 
       <ImageDescription
         image={dogImage[0]}

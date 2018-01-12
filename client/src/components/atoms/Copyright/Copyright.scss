@@ -2,10 +2,12 @@
 
 .Copyright {
   display: flex;
-  width: 90%;
-  margin: auto;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   justify-content: center;
-  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background: white;
 
   .image {
     height: 5rem;

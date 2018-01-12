@@ -1,0 +1,56 @@
+@import 'utils';
+
+.PuppyDetail {
+  width: 100%;
+  background: color('soft-grey');
+
+  .page {
+    width: 70%;
+    margin: auto;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+
+    @include media("<tablet") {
+      width: 90%;
+    }
+
+    .location {
+      font-weight: 300;
+      color: color('hard-grey');
+
+      @include media("<tablet") {
+        // margin-top: 2rem;
+      }
+    }
+
+    .name-image {
+      padding-top: 7rem;
+      display: flex;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+      height: 3rem;
+      text-align: center;
+    }
+
+    .contents {
+      background: white;
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+
+      .content {
+        width: 70%;
+        margin: auto;
+
+      @include media("<tablet") {
+        width: 90%;
+      }
+
+        .image {
+          margin-bottom: 2rem;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

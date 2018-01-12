@@ -3,7 +3,6 @@ import Slider from 'react-slick';
 import styles from './News.scss';
 import classNames from 'classnames/bind'
 import update from 'react-addons-update';
-// import Button from '../../atoms/Button';
 const cx = classNames.bind(styles);
 
 class News extends Component {
@@ -11,9 +10,12 @@ class News extends Component {
   state = {
     newsData: [],
     loading: true,
+    width: 0,
   }
 
   componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
     this.setState({
       newsData: this.props.newsData,
       loading: false,
@@ -21,19 +23,9 @@ class News extends Component {
     setTimeout(() => { window.dispatchEvent(new Event('resize')) }, 0);
   }
 
-  onMouseOut = (i) => {
-    const currentImg = this.state.newsData[i].defaultImg;
+  updateWindowDimensions = () => {
     this.setState({
-      newsData: update(
-        this.state.newsData,
-        {
-          [i]: {
-            currentImg: {
-              $set: currentImg
-            },
-          }
-        }
-      )
+      width: window.innerWidth
     });
   }
 
@@ -53,8 +45,31 @@ class News extends Component {
     });
   }
 
+  onMouseOut = (i) => {
+    const currentImg = this.state.newsData[i].defaultImg;
+    this.setState({
+      newsData: update(
+        this.state.newsData,
+        {
+          [i]: {
+            currentImg: {
+              $set: currentImg
+            },
+          }
+        }
+      )
+    });
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+
   render() {
-    const { newsData } = this.state;
+    const {
+      newsData,
+      width,
+    } = this.state;
     const { onMouseOut, onMouseOver } = this;
     const settings = {
       dots: true,
@@ -105,7 +120,7 @@ class News extends Component {
         }  
       }]
     }
-  
+
     return this.state.loading ? <h2>loading</h2> : (
       <div className={cx('news')}>
         <div className={cx('slider-wrapper')}>
@@ -114,16 +129,23 @@ class News extends Component {
               newsData.map((data, i) => (
                 <div className={cx('page')} key={i}>
                   <a className={cx('image-wrapper')} href={data.url}>
-                    <img
-                      className={cx('image')}
-                      onMouseOver={() => onMouseOver(i)}
-                      onFocus={() => onMouseOver(i)}
-                      
-                      onBlur={() => onMouseOut(i)}
-                      onMouseOut={() => onMouseOut(i)}
-                      src={data.currentImg}
-                      alt={`News${i}`}
-                    />
+                    {
+                      width <= 768
+                        ? <img
+                            className={cx('image')}
+                            src={data.hoverImg}
+                            alt={`News${i}`}
+                          />
+                        : <img
+                            className={cx('image')}
+                            onMouseOver={() => onMouseOver(i)}
+                            onFocus={() => onMouseOver(i)}
+                            onBlur={() => onMouseOut(i)}
+                            onMouseOut={() => onMouseOut(i)}
+                            src={data.currentImg}
+                            alt={`News${i}`}
+                          />
+                    }
                   </a>
                 </div>
               ))

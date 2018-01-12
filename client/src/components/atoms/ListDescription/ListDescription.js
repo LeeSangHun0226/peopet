@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from '../Button';
 import styles from './ListDescription.scss';
 import classNames from 'classnames/bind';
 
@@ -9,6 +8,7 @@ const ListDescription = ({
   first,
   second,
   third,
+  image,
   ...rest
 }) => {
   return (
@@ -26,7 +26,15 @@ const ListDescription = ({
           <img className={cx('image')} src={third.image} alt={`breeder-detail-${first}`}/>
         </div>
         <p className={cx('description')}>{third.description}</p>
-        <button className={cx('button')}>입양가능한 자견 보러가기</button>
+        <a href="http://goto.kakao.com/@peopet">
+          <button className={cx('button-kakao')}>
+            <img className={cx('image')} src={image} alt='detail-kakao-img' />
+            <p className={cx('text')}>카톡문의 @페오펫</p>
+          </button>
+        </a>
+        <a href="http://peopet.co.kr/support">
+          <button className={cx('button-support')}>입양 문의하러 가기</button>
+        </a>
       </div>
     </div>
   );

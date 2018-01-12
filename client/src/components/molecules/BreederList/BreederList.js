@@ -2,8 +2,6 @@ import React from 'react';
 import styles from './BreederList.scss';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
-import FlexBox from '../../atoms/FlexBox';
-import Bar from '../../atoms/Bar';
 // import Button from '../../atoms/Button';
 const cx = classNames.bind(styles);
 
@@ -14,14 +12,25 @@ const BreederList = ({
   tag,
   breederList,
   history,
+  match,
+  location,
   index,
 }) => {
+  // console.log(match)
   const descriptionText = description.slice(0,30);
   let breederId;
   !breederList[0] ? breederId = false : breederId = breederList[0].breederId;
-  return (
-    <div className={cx('BreederList')}>
-        <Link to={`/breeders/${breederId}`} className={cx('link')}>
+    return (
+      <div className={cx('BreederList')}>
+        <Link
+          className={cx('link')}
+          to={{
+            pathname: `/breeders/${breederId}`,
+            state: {
+              description,
+            }
+          }} 
+        >
         {
           index !== 0 ? false : <p className={cx('location')}>HOME &gt; <b>BREEDER</b></p>
         }

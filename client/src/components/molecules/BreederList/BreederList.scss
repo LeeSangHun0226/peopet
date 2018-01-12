@@ -11,7 +11,7 @@
   transition: 0.4s;
 
   &:hover {
-    box-shadow: 15px 15px 10px 0px color('middle-grey');
+    box-shadow: 10px 10px 10px 0px color('middle-grey');
   }
 
   @include media("<wide") {
