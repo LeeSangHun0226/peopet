@@ -10,10 +10,10 @@ exports.oneDogGet = (req, res) => {
 };
 
 exports.allDogGet = (req, res) => {
-  Dog.find({}, (err, data) => {
-    if (err) res.send(err);
-    return res.json(data);
-  });
+  Dog.find({})
+    .sort({ number: 1 })
+    .then(data => res.json(data))
+    .catch(err => res.send(err))
 };
 
 exports.saveDog = (req, res) => {

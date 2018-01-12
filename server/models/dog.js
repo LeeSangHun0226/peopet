@@ -21,6 +21,7 @@ const Dog = new Schema({
     type: String,
   }],
   active: { type: Boolean },
+  number: { type: Number },
 });
 
 module.exports = mongoose.model('Dog', Dog);
