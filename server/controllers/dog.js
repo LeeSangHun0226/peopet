@@ -31,3 +31,19 @@ exports.saveDog = (req, res) => {
     .then(data => res.json(data))
     .catch(err => res.send({ err }));
 };
+
+exports.saveOneDog = (req, res) => {
+  const { dogName, titleImage, description, tag } = req.body;
+
+  const dog = new Dog({
+    dogName,
+    titleImage,
+    description,
+    tag,
+    active: false,
+  });
+
+  return dog.save()
+    .then(data => res.json(data))
+    .catch(err => res.send({ err }));
+};

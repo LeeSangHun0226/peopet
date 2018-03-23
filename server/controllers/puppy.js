@@ -16,27 +16,32 @@ exports.allPuppyGet = (req, res) => {
 };
 
 exports.savePuppy = (req, res) => {
-  const {
-    puppyImage,
-    kannel,
-    sex,
-    father,
-    mother,
-    birthday,
-    description,
-  } = req.body;
-
+  console.log(req.body)
+  const { description } = req.body;  
   const puppy = new Puppy({
-    puppyImage,
-    breed,
-    breeder,
-    kannel,
-    sex,
-    father,
-    mother,
-    birthday,
     description,
-  });
+  })
+  // const {
+  //   puppyImage,
+  //   kannel,
+  //   sex,
+  //   father,
+  //   mother,
+  //   birthday,
+  //   description,
+  // } = req.body;
+
+  // const puppy = new Puppy({
+  //   puppyImage,
+  //   breed,
+  //   breeder,
+  //   kannel,
+  //   sex,
+  //   father,
+  //   mother,
+  //   birthday,
+  //   description,
+  // });
 
   return puppy.save()
     .then(data => res.json(data))

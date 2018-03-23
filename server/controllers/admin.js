@@ -10,3 +10,19 @@ exports.allDataGet = (req, res) => {
     .then(data => res.json(data))
     .catch(err => res.send(err));
 };
+
+exports.oneDogDataGet = (req, res) => {
+  const { _id } = req.params;
+  
+  Dog.findOne({ _id })
+    .then(data => res.json(data))
+    .catch(err => res.send(err))
+}
+
+exports.oneBreederDataGet = (req, res) => {
+  const { _id } = req.params;
+
+  Breeder.findOne({ _id })
+    .then(data => res.json(data))
+    .catch(err => res.send(err))
+}
