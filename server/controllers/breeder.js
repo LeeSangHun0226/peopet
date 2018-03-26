@@ -16,8 +16,9 @@ exports.findBreederGet = (req, res) => {
         
       return Promise.all(promises)
     })
+    // .catch(err => res.sendStatus(404))
     .then(findBreederList => res.json(findBreederList))
-    .catch(err => res.send(err))
+    .catch(err => res.send({ statusCode: 404 }))
 
   // Breeder.find({ dogName }, (err, data) => {
   //   if (err) res.redirect('/');
