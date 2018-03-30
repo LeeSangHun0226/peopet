@@ -35,10 +35,12 @@ exports.oneBreederGet = (req, res) => {
 };
 
 exports.allBreederGet = (req, res) => {
-  Breeder.find({}, (err, data) => {
-    if (err) res.send(err);
-    return res.json(data);
-  });
+  Breeder.find()
+    .sort({ rank: 1})
+    .exec((err, data) => {
+      if (err) res.send(err)
+      return res.json(data)
+    })
 };
 
 exports.saveBreeder = (req, res) => {
@@ -60,6 +62,8 @@ exports.saveBreeder = (req, res) => {
     dogImage,
     dogWord,
     dogDescription,
+    rank,
+    label,
   } = req.body;
 
   const breeder = new Breeder({
@@ -79,6 +83,8 @@ exports.saveBreeder = (req, res) => {
     dogImage,
     dogWord,
     dogDescription,
+    rank,
+    label,
   });
 
   return breeder.save()

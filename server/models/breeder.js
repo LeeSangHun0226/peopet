@@ -9,6 +9,8 @@ const Breeder = new Schema({
   //   type: Schema.Types.ObjectId,
   //   ref: 'Dog',
   // },
+  rank: { type: Number },
+  label: { type: String },
   breederImage: { type: String },
   breederName: { type: String },
   breederDescription: { type: String },
